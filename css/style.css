@@ -1,26 +1,41 @@
 @font-face {
-  font-family: 'Lobster';
-  src: '../assets/fonts/Lobster 1.4.otf';
+  font-family: "Poppins";
+  src:url("../assets/fonts/Poppins-Regular.ttf");
+  src:url("../assets/fonts/Poppins-SemiBold.otf");
 }
-body {
-  /*background-image: url('../assets/images/background.jpg');
+@font-face {
+  font-family: "Lobster";
+  src:url("../assets/fonts/Lobster 1.4.otf");
+}
+
+/*body {
+  background-image: url('../assets/images/background.jpg');
   background-size: cover;
-  height: 100vh;*/
-}
+  height: 100vh;
+}*/
 header {
-  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*background-color: white;
   height: 70px;
-  position: relative;
+  position: relative;*/
 }
 header .logo img {
   width: 250px;
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  left: 0
+  left: 0;*/
+}
+header .title {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 header .title h1{
-  color: red;
-  font-family: Lobster;
+  color: rgb(230,23,130);
+  font-family: 'Poppins';
+  font-size: 35px;
 }
 main {
   
