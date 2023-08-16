@@ -9,6 +9,9 @@
 }
 :root {
   --color-primary: #da188d;
+  --border-color-1: #FF353E;
+  --border-color-2: #C02739;
+  --border-color-3: #02665c;
 }
 body {
   /*background-image: url('../assets/images/background.jpg');
@@ -63,10 +66,43 @@ main {
   align-items: center;
 }
 .square {
-  border: 8px solid #02665c;
+  border: 12px solid transparent;
   width: 300px;
   height: 394px;
   box-sizing: border-box;
+  position: relative;
+}
+.square:before {
+  content: '';
+  position: absolute;
+  border-top: 12px solid var(--border-color-1);
+  border-right: 12px solid var(--border-color-1);
+  border-left: 12px solid var(--border-color-1);
+  width: calc(100% + 24px);
+  height: 72px;
+  top: -12px;
+  left: -12px;
+}
+.frame-1 {
+  width: 100%;
+  height: 100%;
+  border: 5px solid transparent; 
+}
+.frame-1:before {
+  content: '';
+  position: absolute;
+  border-top: 5px solid var(--border-color-2);
+  border-right: 5px solid var(--border-color-2);
+  border-left: 5px solid var(--border-color-2);
+  width: 100%;
+  height: 60px;
+  top: 0px;
+  left: 0px;
+}
+.frame-2 {
+  border: 8px solid var(--border-color-3);
+  width: 100%;
+  height: 100%;
 }
 .autorretrato {
   width: 100%;
@@ -82,6 +118,7 @@ main {
   height: 100%;
   padding: 15px;
 }
+
 .soon h2 {
   font-family: 'Lobster';
   font-size: 38px;
