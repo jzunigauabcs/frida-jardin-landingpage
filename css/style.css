@@ -68,7 +68,7 @@ main {
 .square {
   border: 12px solid transparent;
   width: 300px;
-  height: 394px;
+  height: 378px;
   box-sizing: border-box;
   position: relative;
 }
@@ -148,6 +148,13 @@ main {
   width: 30px;
 }
 
+@media screen and (min-width: 1800px) {
+  .square {
+    width:350px;
+    height: 444px;
+  }
+}
+
 @media screen and (max-width: 1199px){
   header .logo img {
     width: 250px;
@@ -165,9 +172,13 @@ main {
   header .title h1 {
     font-size: 19px;
   }
-  .square {
+  /*.square {
     width: 220px;
     height: 284px;
+  }*/
+  main {
+    flex-direction: column;
+    padding-top: 150px;
   }
   .soon h2 {
     font-size: 28px;
@@ -195,5 +206,17 @@ main {
   }
   .square {
     margin-bottom: 20px;
+  }
+}
+
+@media screen and(max-height: 760px) and (max-width: 1480px) {
+    header .logo img {
+      width: 250px;
+    }
+    header .title h1 {
+      font-size: 30px;
+    }
+    main {
+    padding-top: 120px;
   }
 }
