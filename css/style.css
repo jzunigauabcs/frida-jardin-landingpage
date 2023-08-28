@@ -243,7 +243,14 @@ main {
     font-size: 28px;
   }
 }
-
+@media (max-height: 760px) and (max-width: 1480px) {
+    header .title h1 {
+      font-size: 50px;
+    }
+    main {
+      margin-top: 120px;
+  }
+}
 @media screen and (max-width: 575px) {
   header {
     flex-direction: column;
@@ -254,9 +261,10 @@ main {
   }
   header .title {
     margin: 0;
+    margin-top: 15px;
   }
   header .title h1 {
-    font-size: 23px;
+    font-size: 25px;
   }
   main {
     flex-direction: column;
@@ -270,12 +278,11 @@ main {
     font-size: 20px;
   }
 }
-
-@media (max-height: 760px) and (max-width: 1480px) {
-    header .title h1 {
-      font-size: 50px;
-    }
-    main {
-      padding-top: 120px;
+@media screen and (max-width: 360px) {
+  header .title h1 {
+    font-size: 20px;
+  }
+  .social .contacto a {
+    font-size: 16px;
   }
 }
