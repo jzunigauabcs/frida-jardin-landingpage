@@ -17,4 +17,4 @@ jobs:
         server: fridaensujardinsecreto.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /home/fridaens/public_html/
+        server-dir: /
