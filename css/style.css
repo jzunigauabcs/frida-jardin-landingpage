@@ -150,6 +150,20 @@ main {
   font-family: 'Poppins';
   font-size: 12px;
 }
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 15px 15px 0;
+}
+.banco-mexico {
+  width: 100px;
+}
+.banco-mexico img {
+  max-width: 100%;
+  height: auto;
+}
 .social ul {
   display: flex;
   flex-direction: row;
@@ -164,6 +178,12 @@ main {
 }
 .social img {
   width: 30px;
+}
+.museo-frida-kahlo {
+  width: 100px;
+}
+.muse-frida-kahlo img{
+
 }
 
 @media screen and (min-width: 1800px) {
