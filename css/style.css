@@ -133,19 +133,6 @@ main {
   color: var(--color-1);
   text-align: center;
 }
-.social {
-  width: 100%;
-}
-.social .contacto {
-  text-align: center;
-}
-.social .contacto a {
-  color: var(--color-2);
-  font-size: 32px;
-  margin-bottom: 5px;
-  text-align: center;
-  text-decoration: none;
-}
 .soon p {
   font-family: 'Poppins';
   font-size: 12px;
@@ -164,6 +151,16 @@ footer {
   max-width: 100%;
   height: auto;
 }
+.social .contacto {
+  text-align: center;
+}
+.social .contacto a {
+  color: var(--color-2);
+  font-size: 32px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: none;
+}
 .social ul {
   display: flex;
   flex-direction: row;
@@ -179,13 +176,30 @@ footer {
 .social img {
   width: 30px;
 }
-.museo-frida-kahlo {
-  width: 100px;
+.museo-frida-kahlo-logo {
+  width: 70px;
+  position: absolute;
+  right: 14%;
 }
-.muse-frida-kahlo img{
-
+.museo-frida-kahlo-logo img{
+  max-width: 100%;
+  height: auto;
 }
-
+@media screen and (max-width: 2300px) {
+  .museo-frida-kahlo-logo {
+    right: 12%;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .museo-frida-kahlo-logo {
+    right: 10%;
+  }
+}
+@media screen and (max-width: 1799px) {
+  .museo-frida-kahlo-logo {
+    right: 14%;
+  }
+}
 @media screen and (min-width: 1800px) {
   header .title h1 {
     font-size: 60px;
