@@ -185,6 +185,15 @@ footer {
   max-width: 100%;
   height: auto;
 }
+
+.section-wall-bg{
+  background-image: url('../assets/images/Landing2560x1440.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}
+
+
 @media screen and (max-width: 2300px) {
   .museo-frida-kahlo-logo {
     right: 12%;
