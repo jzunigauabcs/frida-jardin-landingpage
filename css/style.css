@@ -187,12 +187,18 @@ footer {
 }
 
 .section-wall-bg{
-  background-image: url('../assets/images/Landing2560x1440.jpg');
+  background-image: url('../assets/images/blue-wall2560x1440.jpg');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
 }
 
+.pink-title{
+  color: var(--color-1)
+}
+.white-title{
+  color: var(--color-2);
+}
 
 @media screen and (max-width: 2300px) {
   .museo-frida-kahlo-logo {
