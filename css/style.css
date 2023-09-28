@@ -193,6 +193,12 @@ footer {
   background-size: 100% 100%;
 }
 
+.slider-p{
+  font-family: 'Poppins';
+  color: var(--color-2);
+  font-size: 20px;
+}
+
 .pink-title{
   color: var(--color-1)
 }
