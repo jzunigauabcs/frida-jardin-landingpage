@@ -199,6 +199,16 @@ footer {
   font-size: 20px;
 }
 
+.services-poppins{
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+
+.menu-option{
+  font-family: 'Poppins';
+  color: var(--color-2);
+  font-size: 5px;
+}
 .pink-title{
   color: var(--color-1)
 }
@@ -210,15 +220,22 @@ footer {
   .museo-frida-kahlo-logo {
     right: 12%;
   }
+  
 }
 @media screen and (max-width: 1920px) {
   .museo-frida-kahlo-logo {
     right: 10%;
   }
+  .services-poppins{
+    font-size: 23px;
+  }
 }
 @media screen and (max-width: 1799px) {
   .museo-frida-kahlo-logo {
     right: 14%;
+  }
+  .services-poppins{
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 1800px) {
@@ -327,6 +344,9 @@ footer {
   .soon h2 {
     font-size: 28px;
   }
+  .menu-option p{
+   font-size: 14px; 
+  }
 }
 @media (max-height: 760px) and (max-width: 1480px) {
     header .title h1 {
@@ -362,6 +382,10 @@ footer {
   .social .contacto a {
     font-size: 20px;
   }
+  .menu-option p{
+    font-size: 10px; 
+   }
+  
 }
 @media screen and (max-width: 360px) {
   header .title h1 {
