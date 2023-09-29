@@ -35,7 +35,7 @@ header .logo {
   position: absolute;
   top: 0;
 }
-header .logo img {
+header .logo img, .logo-img {
   width: 200px;
 }
 header .title {
