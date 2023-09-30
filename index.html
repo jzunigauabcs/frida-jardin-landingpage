@@ -59,13 +59,13 @@
     </div>
     <!-- LOGO END -->
 
-    <div class="container-fluid px-0">
-      <img src="./assets/images/red-stripe2560x1440.png" class="img-fluid w-100 " alt="mao">
+    <div class="container-fluid px-0 py-5">
+      <img src="./assets/images/red-stripe.png" class="img-fluid w-100 " alt="mao">
     </div>
 
-    <div class="container">
+    <div class="container-fluid pt-5">
       <div class="row gx-4 text-center">
-        <div class="col-md-12 col-lg-4">
+        <div class="col-md-12 col-lg-4 pb-3">
           <section class="square mx-auto">
             <div class="frame-1">
               <div class="frame-2">
@@ -77,7 +77,7 @@
             </div>
           </section>
         </div>
-        <div class="col-md-12 col-lg-4">
+        <div class="col-md-12 col-lg-4 pb-3">
           <section class="square mx-auto">
             <div class="frame-1">
               <div class="frame-2">
@@ -86,13 +86,13 @@
             </div>
           </section>
         </div>
-        <div class="col-md-12 col-lg-4">
+        <div class="col-md-12 col-lg-4 pb-3">
           <section class="square mx-auto">
             <div class="frame-1">
               <div class="frame-2">
                 <div class="presentation">
                   <h2>Adquiere tus boletos</h2>
-                  <a href="#" class="btn btn-primary btn-lg border-0 rounded-pill" style="background-color: var(--color-1); font-family: 'Poppins';">Comprar</a>
+                  <a href="#" class="btn btn-primary btn-lg border-0 rounded-pill" style="background-color: var(--color-1); font-family: 'Poppins'; width: 100%;">Comprar</a>
                 </div>
               </div>
             </div>
@@ -121,21 +121,21 @@
   <!-- INICIO / HEADER END-->
 
   <!-- SLIDER -->
-  <div id="slider" class="container-fluid section-wall-bg">
+  <div id="slider" class="container-fluid section-wall-bg px-0 ">
 
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="container-fluid">
+            <div class="container-fluid px-0">
               <div class="row">
-                <div class="col-0 col-lg-1"></div>
+
                 <div class="col-12 col-lg-6">
                   <img src="./assets/images/sillas.jpeg" class="img-fluid" alt="">
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-6">
                   <div class="row">
                     <div class="col px-5">
-                      <div class="row py-3">
+                      <div class="row pt-5">
                         <h1 style="font-family: Lobster;" class="white-title">Frida en su Jardín Secreto</h1>
                       </div>
                       <div class="row">
@@ -161,16 +161,15 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="container-fluid">
+            <div class="container-fluid px-0">
               <div class="row">
-                <div class="col-0 col-lg-1"></div>
                 <div class="col-12 col-lg-6">
                   <img src="./assets/images/colibri.jpeg" class="img-fluid" alt="">
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-6">
                   <div class="row">
                     <div class="col px-5">
-                      <div class="row py-5">
+                      <div class="row pt-5">
                         <p class="slider-p">Réplicas de la Casa Azul y su jardín, los
                           lugares que inspiraron a la artista.
                           Seis esculturas monumentales de animales
@@ -183,17 +182,15 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="container-fluid">
+            <div class="container-fluid px-0">
               <div class="row">
-                <div class="col-0 col-lg-1">
-                </div>
                 <div class="col-12 col-lg-6">
                   <img src="./assets/images/piramide.jpg" class="img-fluid" alt="">
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-6">
                   <div class="row">
                     <div class="col px-5">
-                      <div class="row py-5">
+                      <div class="row pt-5">
                         <p class="slider-p">La pirámide en honor a Diego Rivera, su
                           esposo y musa.</p>
                       </div>
@@ -205,12 +202,23 @@
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <div class="container position-relative">
+            <div class="col-4 rounded-circle p-3 position-absolute top-50 start-50 translate-middle" style="background-color: rgb(96, 96, 134); width: fit-content;">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </div>
+            
+          </div>
+          
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <div class="container position-relative">
+            <div class="col-4 rounded-circle p-3 position-absolute top-50 start-50 translate-middle" style="background-color: rgb(96, 96, 134); width: fit-content;">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </div>
+          </div>
+          
         </button>
       </div>
 
@@ -218,7 +226,7 @@
   <!-- SLIDER END -->
 
   <!-- TU VISITA -->
-  <div id="tu-visita" class="container-fluid py-5">
+  <div id="tu-visita" class="container-fluid section-padding">
     <div class="container">
         <div class="row align-items-start">
             <div class="col-sm-12 col-md-4 px-5">
@@ -298,8 +306,8 @@
   <!-- TU VISITA END-->
 
   <!-- BOLETOS -->
-  <div id="boletos" class="container-fluid section-wall-bg py-5">
-    <div class="container">
+  <div id="boletos" class="container-fluid section-wall-bg">
+    <div class="container section-padding">
         <div class="row align-items-start">
             <div class="col-sm-12 col-md-12 px-5 pb-4">
                 <h1 style="font-family: Lobster;" class="white-title">Boletos</h1>	
@@ -369,11 +377,11 @@
   <!-- BOLETOS END -->
 
   <!-- GRUPOS -->
-  <div id="grupos" class="container-fluid pb-5 px-0" style="background-color: var(--color-2)">
+  <div id="grupos" class="container-fluid px-0" style="background-color: var(--color-2)">
         
     <img src="./assets/images/render-sillas-grupos.jpeg" class="img-fluid pb-5" style="width: 100%;">
 
-    <div class="container">
+    <div class="container section-padding">
         <h1 style="font-family: Lobster;" class="pink-title pb-5">Grupos</h1>
         
         <div class="row pb-4">
@@ -407,7 +415,7 @@
   <!-- GRUPOS END -->
 
   <!-- OTROS SERVICIOS -->
-  <div id="otros-servicios" class="container-fluid section-wall-bg py-5 px-0">
+  <div id="otros-servicios" class="container-fluid section-wall-bg section-padding px-0">
 
     <div class="container">
       <h1 style="font-family: Lobster;" class="white-title">Otros servicios</h1>
@@ -427,11 +435,8 @@
                           <div class="row">
                             <h2><span>La Rosita<br>Restaurante<br>Pulquería</span></h2>
                           </div>
-                          <div class="row services-poppins">
-                            <p>Martes a viernes<br>
-                              10:00 – 18:00<br>
-                             Miércoles<br>
-                             11:00 – 18:00 h</p>
+                          <div class="row">
+                            <h2>Próximamente</h2>
                           </div>
                         </div>
                       </div>
@@ -490,7 +495,7 @@
   <!-- OTROS SERVICIOS END -->
 
   <!-- CONTÁCTANOS -->
-  <div id="contactanos" class="container-fluid" style="background-color: var(--color-2);">
+  <div id="contactanos" class="container-fluid section-padding" style="background-color: var(--color-2);">
     <div class="container">
       <div class="row">
         <div class="col-12 col-lg-6 p-5">
@@ -538,7 +543,7 @@
   <!-- CONTÁCTANOS END -->
 
   <!-- FACTURACIÓN -->
-  <div id="facturacion" class="container-fluid py-5" style="background-color: var(--color-4)">
+  <div id="facturacion" class="container-fluid section-padding" style="background-color: var(--color-4)">
     <div class="container">
         <div class="row align-items-start">
             <div class="col-sm-12 col-md-12 px-5 pb-4">

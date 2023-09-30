@@ -221,6 +221,17 @@ footer {
   color: var(--color-2);
 }
 
+.section-padding{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (min-width:1400px){
+  .frames{
+    max-width: 2000 !important;
+  }
+}
+
 @media screen and (max-width: 2300px) {
   .museo-frida-kahlo-logo {
     right: 12%;
