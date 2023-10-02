@@ -7,6 +7,10 @@
   font-family: "Lobster";
   src:url("../assets/fonts/Lobster 1.4.otf");
 }
+@font-face {
+  font-family: "Poppins-regular";
+  src:url("../assets/fonts/Poppins-Regular.ttf");
+}
 :root {
   --color-1: #DA188D;
   --color-2: #FFFFFF;
@@ -411,3 +415,88 @@ footer {
     font-size: 16px;
   }
 }
+
+
+h1 {
+  font-size: 60px;
+}
+
+/* EXPOSICION */
+#exposicion p {
+  font-size: 25px;
+  font-family: 'poppins-regular';
+}
+
+/* TU VISITA  */
+#tu-visita {
+  font-size: 18px;
+  font-family: 'poppins-regular';
+}
+
+#tu-visita h5 {
+  font-size: 25px;
+  font-family: 'poppins';
+}
+
+#tu-visita h6 {
+  font-size: 20px;
+  font-family: 'poppins';
+}
+
+#small-letter {
+  font-size: 14px;
+}
+
+/* BOLETOS */
+#boletos {
+  font-family: 'poppins';
+}
+
+#boletos h5 {
+  font-size: 25px;
+}
+
+#boletos-parte-1 {
+  font-size: 22px;
+}
+
+#boletos-parte-2 {
+  font-size: 16px;
+}
+
+/* GRUPOS */
+#grupos {
+  font-size: 20px;
+  font-family: 'poppins-regular';
+}
+
+#grupos h5 {
+  font-size: 25px;
+  font-family: 'poppins';
+}
+
+/* CONTACTANOS */
+#contactanos {
+  font-size: 20px;
+}
+
+#contactanos h5 {
+  font-size: 25px;
+}
+
+#contactanos-terminos-condiciones {
+  font-size: 15px;
+}
+
+/* FACTURACION */
+#facturacion {
+  font-size: 18px;
+  font-family: 'Poppins-regular';
+}
+
+#facturacion-importante {
+  font-size: 15px;
+  font-family: 'Poppins';
+}
+
+
