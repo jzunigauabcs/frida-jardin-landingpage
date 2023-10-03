@@ -192,10 +192,20 @@ footer {
 }
 
 .section-wall-bg{
-  background-image: url('../assets/images/blue-wall2560x1440.jpg');
+  background-image: url('../assets/images/blue-wall-\(2\)-2560x1440.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
+}
+
+.boton{
+  font-family: 'Poppins';
+  background-color: none;
+  background-image: url('./assets/images/boton-vertical.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .slider-p{
