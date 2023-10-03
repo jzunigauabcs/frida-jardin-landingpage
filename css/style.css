@@ -298,6 +298,9 @@ footer {
   .museo-frida-kahlo-logo {
     right: 10%;
   }
+  .section-wall-bg{
+    background-image: url('../assets/images/blue-wall-1350x1000.png');
+  }
 }
 @media (min-width: 1280px) and (max-height: 800px) {
   main {
@@ -376,6 +379,10 @@ footer {
   }
   .menu-option p{
    font-size: 14px; 
+  }
+  .section-wall-bg{
+    background-image: url('../assets/images/blue-wall-1179x2556.png');
+
   }
 }
 @media (max-height: 760px) and (max-width: 1480px) {
