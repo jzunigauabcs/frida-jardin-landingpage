@@ -428,6 +428,9 @@ footer {
   .txt-titulo{
     font-size: 40px;
   }
+  .btn-prev{
+    left: 80% !important  ;
+  }
 }
 @media screen and (max-width: 360px) {
   header .title h1 {
@@ -436,11 +439,9 @@ footer {
   .social .contacto a {
     font-size: 16px;
   }
+  
 }
 
-.txt-correo{
-  font-size: 12px;
-}
 
 h1 {
   font-size: 60px;
