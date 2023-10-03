@@ -421,26 +421,22 @@ h1 {
   font-size: 60px;
 }
 
+h5 {
+  font-size: 25px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
 /* EXPOSICION */
 #exposicion p {
   font-size: 25px;
-  font-family: 'poppins-regular';
 }
 
 /* TU VISITA  */
 #tu-visita {
   font-size: 18px;
-  font-family: 'poppins-regular';
-}
-
-#tu-visita h5 {
-  font-size: 25px;
-  font-family: 'poppins';
-}
-
-#tu-visita h6 {
-  font-size: 20px;
-  font-family: 'poppins';
 }
 
 #small-letter {
@@ -448,14 +444,6 @@ h1 {
 }
 
 /* BOLETOS */
-#boletos {
-  font-family: 'poppins';
-}
-
-#boletos h5 {
-  font-size: 25px;
-}
-
 #boletos-parte-1 {
   font-size: 22px;
 }
@@ -467,21 +455,11 @@ h1 {
 /* GRUPOS */
 #grupos {
   font-size: 20px;
-  font-family: 'poppins-regular';
-}
-
-#grupos h5 {
-  font-size: 25px;
-  font-family: 'poppins';
 }
 
 /* CONTACTANOS */
 #contactanos {
   font-size: 20px;
-}
-
-#contactanos h5 {
-  font-size: 25px;
 }
 
 #contactanos-terminos-condiciones {
@@ -491,12 +469,10 @@ h1 {
 /* FACTURACION */
 #facturacion {
   font-size: 18px;
-  font-family: 'Poppins-regular';
 }
 
 #facturacion-importante {
   font-size: 15px;
-  font-family: 'Poppins';
 }
 
 
