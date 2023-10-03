@@ -422,7 +422,12 @@ footer {
   .menu-option p{
     font-size: 10px; 
    }
-  
+  .txt-correo{
+    font-size: 15px;
+  }
+  .txt-titulo{
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 360px) {
   header .title h1 {
@@ -433,6 +438,9 @@ footer {
   }
 }
 
+.txt-correo{
+  font-size: 12px;
+}
 
 h1 {
   font-size: 60px;
