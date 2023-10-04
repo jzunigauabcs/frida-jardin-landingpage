@@ -1,6 +1,5 @@
 @font-face {
   font-family: "Poppins";
-  src:url("../assets/fonts/Poppins-Regular.ttf");
   src:url("../assets/fonts/Poppins-SemiBold.otf");
 }
 @font-face {
@@ -502,3 +501,64 @@ h6 {
 }
 
 
+/* Media query para pantallas de ancho máximo de 600px */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+  
+  h6 {
+    font-size: 16px;
+  }
+
+  /* EXPOSICION */
+  #exposicion p {
+    font-size: 15px;
+  }
+
+  /* TU VISITA  */
+  #tu-visita {
+    font-size: 15px;
+  }
+  #small-letter {
+    font-size: 12px;
+  }
+
+  /* BOLETOS */
+  #boletos-parte-1 {
+    font-size: 15px;
+  }
+  #boletos-parte-2 {
+    font-size: 15px;
+  }
+
+  /* GRUPOS */
+  #grupos {
+    font-size: 15px;
+  }
+
+  /* CONTACTANOS */
+  #contactanos {
+    font-size: 15px;
+  }
+  #contactanos-terminos-condiciones {
+    font-size: 12px;
+  }
+
+  /* FACTURACION */
+  #facturacion {
+    font-size: 15px;
+  }
+  #facturacion-importante {
+    font-size: 12px;
+  }
+
+  /* FOOTER */
+  h4 {
+    font-size: 18px;
+  }
+}
