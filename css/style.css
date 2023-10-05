@@ -233,12 +233,33 @@ footer {
 .white-title{
   color: var(--color-2);
 }
-
+.footer-titles{
+  font-family: 'Lobster';
+  color: var(--color-1);
+}
 .section-padding{
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
+.extra{
+  color: var(--color-2);
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+.white-poppins{
+  font-family: 'Poppins';
+  color: var(--color-2);
+}
+.logo-museo{
+  width: 100px;
+  height: 100px;
+}
+.icon-social{
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 @media (min-width:1400px){
   .frames{
     max-width: 2000 !important;
@@ -430,6 +451,9 @@ footer {
   .btn-prev{
     left: 80% !important  ;
   }
+  .extra{
+    font-size: 10px;
+  }
 }
 @media screen and (max-width: 360px) {
   header .title h1 {
@@ -438,7 +462,9 @@ footer {
   .social .contacto a {
     font-size: 16px;
   }
-  
+  .footer-mail{
+    font-size: 14px;
+  }
 }
 
 
