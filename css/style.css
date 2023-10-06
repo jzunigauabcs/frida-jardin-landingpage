@@ -108,7 +108,7 @@ main {
   height: 100%;
 }
  .square > .frame-1 > .frame-2 > div {
-  background-color: var(--color-2);
+  background-color: hsl(35, 22%, 85%);
   color: var(--color-1);
   font-family: 'Lobster';
   display: flex;
@@ -259,6 +259,14 @@ footer {
   height: 35px;
   margin-left: 10px;
   margin-right: 10px;
+}
+.fondo-cuadro{
+  background-color: hsl(35, 22%, 85%);
+}
+.no-button-style{
+  border: none !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+
 }
 @media (min-width:1400px){
   .frames{
