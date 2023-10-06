@@ -463,6 +463,12 @@ footer {
   .extra{
     font-size: 10px;
   }
+  .icon-social{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 @media screen and (max-width: 360px) {
   header .title h1 {
