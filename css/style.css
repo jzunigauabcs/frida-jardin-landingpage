@@ -15,6 +15,7 @@
   --color-2: #FFFFFF;
   --color-3: #0062A6;
   --color-4: #363637;
+  --color-5: RGB(202, 203, 200);
   --border-color-1: #FF353E;
   --border-color-2: #C02739;
   --border-color-3: #02665c;
@@ -493,7 +494,7 @@ h6 {
   font-size: 25px;
 }
 
-/* TU VISITA  */
+/* PLANEA VISITA  */
 #tu-visita {
   font-size: 18px;
 }
@@ -525,6 +526,10 @@ h6 {
   font-size: 15px;
 }
 
+#oferta-trabajo {
+  font-size: 16px;
+}
+
 /* FACTURACION */
 #facturacion {
   font-size: 18px;
@@ -554,7 +559,7 @@ h6 {
     font-size: 15px;
   }
 
-  /* TU VISITA  */
+  /* PLANEA TU VISITA  */
   #tu-visita {
     font-size: 15px;
   }
@@ -582,6 +587,9 @@ h6 {
   #contactanos-terminos-condiciones {
     font-size: 12px;
   }
+  #oferta-trabajo {
+    font-size: 13px;
+  }
 
   /* FACTURACION */
   #facturacion {
@@ -594,5 +602,17 @@ h6 {
   /* FOOTER */
   h4 {
     font-size: 18px;
+  }
+}
+
+/* Cambiar el color y el grosor del borde izquierdo */
+.custom-border-start {
+  border-left: 2px solid #DA188D; /* Cambiar el color a rojo y el grosor a 4 píxeles (ajusta según lo necesites) */
+}
+
+/* Estilo para pantallas medianas y grandes (col-md-12) */
+@media (max-width: 991px) {
+  .col-md-12.custom-border-start {
+    border-left: none; /* Oculta el borde izquierdo cuando la columna tiene col-md-12 */
   }
 }
