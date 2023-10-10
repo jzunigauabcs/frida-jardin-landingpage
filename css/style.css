@@ -192,7 +192,7 @@ footer {
 }
 
 .section-wall-bg{
-  background-image: url('../assets/images/blue-wall-\(2\)-2560x1440.png');
+  background-image: url('../assets/images/blue-wall-\(2\)-2560x1440.jpg');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
@@ -410,7 +410,7 @@ footer {
    font-size: 14px; 
   }
   .section-wall-bg{
-    background-image: url('../assets/images/blue-wall-1179x2556.png');
+    background-image: url('../assets/images/blue-wall-1179x2556.jpg');
 
   }
 }
