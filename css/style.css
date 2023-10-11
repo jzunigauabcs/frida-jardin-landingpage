@@ -125,6 +125,10 @@ main {
   font-size: 34px;
 }
 
+.square > .frame-1 > .frame-2 > div p{
+  font-size: 20px;
+}
+
 .presentation span {
   color: var(--color-3);  
 }
@@ -214,10 +218,6 @@ footer {
   font-size: 20px;
 }
 
-.too-much-text{
-  font-size: 16px;
-}
-
 .services-poppins{
   font-family: 'Poppins';
   font-size: 14px;
@@ -269,6 +269,14 @@ footer {
   background-color: rgba(0, 0, 0, 0) !important;
 
 }
+.stripe{
+  height: 65px;
+}
+.blue-content{
+  font-family: "Poppins";
+  color: var(--color-3);
+  font-weight: 100;
+}
 @media (min-width:1400px){
   .frames{
     max-width: 2000 !important;
@@ -307,6 +315,9 @@ footer {
   }
   .square > .frame-1 > .frame-2 > div h2{
     font-size: 38px;
+  }
+  .square > .frame-1 > .frame-2 > div p{
+    font-size: 25px;
   }
   .soon p {
     font-size: 16px;
@@ -347,11 +358,17 @@ footer {
   .square > .frame-1 > .frame-2 > div h2 {
     font-size: 25px;
   }
+  .square > .frame-1 > .frame-2 > div p{
+    font-size: 14px;
+  }
   .social .contacto a {
     font-size: 25px;
   }
   .museo-frida-kahlo-logo {
     right: 10%;
+  }
+  .too-much-text{
+    font-size: 16px;
   }
 }
 
