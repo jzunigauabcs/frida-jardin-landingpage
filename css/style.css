@@ -185,6 +185,54 @@ header .logo img, .logo-img {
   color: var(--color-3);
   font-weight: 100;
 }
+.slider-btn{
+  background-color: rgb(96, 96, 134) !important;
+  width: fit-content !important;
+}
+.bg-white{
+  background-color: var(--color-2);
+}
+.bg-pink{
+  background-color: var(--color-1);
+}
+.bg-black{
+  background-color: black;
+}
+.bg-5{
+  background-color: var(--color-5);
+  font-family: poppins-regular;
+}
+.boletos-btn{
+  background-color: transparent;
+  color: white;
+  font-family: 'Poppins';
+  background-image: url('../assets/images/boton-vertical.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  --bs-btn-hover-bg:transparent;
+}
+.comprar-btn{
+  background-image: url('../assets/images/boton.png');
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 100% 100%;
+  font-family: 'Poppins';
+  width: 100%;
+  --bs-btn-hover-bg:transparent;
+}
+.btn-pink{
+  --bs-btn-hover-bg:var(--color-1);
+  --bs-btn-active-bg:var(--color-1)
+}
+.list-font{
+  font-size: 40px;
+}
+.sub-text{
+  font-size: 12px !important;
+  font-family: 'Poppins';
+}
 @media (min-width:1400px){
   .frames{
     max-width: 2000 !important;
