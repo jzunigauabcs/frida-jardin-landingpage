@@ -21,7 +21,15 @@
   --border-color-3: #02665c;
 }
 
-
+.lobster{
+  font-family: 'Lobster';
+}
+.poppins{
+  font-family: 'Poppins';
+}
+.poppins-regular{
+  font-family: 'Poppins-regular';
+}
 
 header .logo img, .logo-img {
   width: 200px;
@@ -121,7 +129,7 @@ header .logo img, .logo-img {
 }
 
 .slider-p{
-  font-family: 'Poppins';
+  font-family: 'Poppins-regular';
   color: var(--color-2);
   font-size: 20px;
 }
@@ -399,6 +407,24 @@ header .logo img, .logo-img {
   }
 }
 
+.tu-visita-tarifas {
+  font-family: 'Lobster';
+  color: var(--color-3)
+}
+
+.linea-horizontal-blanca {
+  border-width: 2px; color: white
+}
+
+.contactanos-datos {
+  font-family: 'poppins';
+  color: var(--color-1);
+}
+
+.contactanos-direccion {
+  font-family: 'poppins';
+  font-size: 12px;
+}
 
 h1 {
   font-size: 60px;
