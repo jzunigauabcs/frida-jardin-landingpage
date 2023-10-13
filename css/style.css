@@ -241,6 +241,12 @@ header .logo img, .logo-img {
   font-size: 12px !important;
   font-family: 'Poppins';
 }
+.fit-content{
+  width: fit-content;
+}
+.txt-align-start{
+  text-align: start;
+}
 @media (min-width:1400px){
   .frames{
     max-width: 2000 !important;
