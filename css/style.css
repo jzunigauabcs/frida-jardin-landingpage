@@ -16,7 +16,7 @@
   --color-3: #0062A6;
   --color-4: #363637;
   --color-5: RGB(202, 203, 200);
-  --color-6: RGB(227, 120, 63);
+  --color-6: #E87246;
   --border-color-1: #FF353E;
   --border-color-2: #C02739;
   --border-color-3: #02665c;
@@ -248,6 +248,28 @@ header .logo img, .logo-img {
 .txt-align-start{
   text-align: start;
 }
+
+/* CALENDARIO */
+.calendario {
+  font-size: 20px;
+  background-image: url('../assets/images/pan-muerto.png');
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 90% 150%;
+}
+
+.orange-text{
+  color: var(--color-6)
+}
+.bg-orange{
+  background-color: var(--color-6);
+}
+
+.custom-border {
+  border: 4px;
+  border-radius: 0 0 50px 0;
+}
+
 @media (min-width:1400px){
   .frames{
     max-width: 2000 !important;
@@ -332,7 +354,12 @@ header .logo img, .logo-img {
   .too-much-text{
     font-size: 16px;
   }
+  /* CALENDARIO */
+.calendario {
+  background-position: center right;
+  background-size: 90% 100%;
 }
+} 
 
 @media screen and (max-width: 991px) {
   .information {
@@ -363,6 +390,10 @@ header .logo img, .logo-img {
   .section-wall-bg{
     background-image: url('../assets/images/blue-wall-1179x2556.jpg');
 
+  }
+  .calendario {
+    background-position: 50%;
+    background-size: 300% 100%;
   }
 }
 @media (max-height: 760px) and (max-width: 1480px) {
@@ -569,19 +600,3 @@ h6 {
 }
 
 
-/* CALENDARIO */
-#calendario {
-  font-size: 20px;
-}
-
-.orange-text{
-  color: var(--color-6)
-}
-.bg-orange{
-  background-color: var(--color-6);
-}
-
-.custom-border {
-  border: 4px;
-  border-radius: 0 0 50px 0;
-}
