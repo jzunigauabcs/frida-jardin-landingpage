@@ -16,6 +16,7 @@
   --color-3: #0062A6;
   --color-4: #363637;
   --color-5: RGB(202, 203, 200);
+  --color-6: RGB(227, 120, 63);
   --border-color-1: #FF353E;
   --border-color-2: #C02739;
   --border-color-3: #02665c;
@@ -347,7 +348,6 @@ header .logo img, .logo-img {
 }
 
 @media screen and (max-width: 768px) {
-
   header .logo img {
     width: 170px;
   }
@@ -530,6 +530,11 @@ h6 {
     font-size: 15px;
   }
 
+  /* CALENDARIO */
+  #calendario {
+    font-size: 15px;
+  }
+
   /* GRUPOS */
   #grupos {
     font-size: 15px;
@@ -561,4 +566,22 @@ h6 {
   .col-md-12.custom-border-start {
     border-left: none; /* Oculta el borde izquierdo cuando la columna tiene col-md-12 */
   }
+}
+
+
+/* CALENDARIO */
+#calendario {
+  font-size: 20px;
+}
+
+.orange-text{
+  color: var(--color-6)
+}
+.bg-orange{
+  background-color: var(--color-6);
+}
+
+.custom-border {
+  border: 4px;
+  border-radius: 0 0 50px 0;
 }
