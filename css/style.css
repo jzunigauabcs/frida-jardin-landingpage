@@ -221,6 +221,7 @@ header .logo img, .logo-img {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   --bs-btn-hover-bg:transparent;
+  --bs-btn-active-bg:transparent;
 }
 .comprar-btn{
   background-image: url('../assets/images/boton.png');
@@ -230,10 +231,11 @@ header .logo img, .logo-img {
   font-family: 'Poppins';
   width: 100%;
   --bs-btn-hover-bg:transparent;
+  --bs-btn-active-bg:transparent;
 }
 .btn-pink{
   --bs-btn-hover-bg:var(--color-1);
-  --bs-btn-active-bg:var(--color-1)
+  --bs-btn-active-bg:var(--color-1);
 }
 .list-font{
   font-size: 40px;
@@ -333,6 +335,12 @@ header .logo img, .logo-img {
     background-image: url('../assets/images/blue-wall-1350x1000.png');
   }
 }
+@media screen and (max-width: 1440px){
+  .calendario{
+    background-position: center right;
+    background-size: 90% 100%;
+  }
+}
 @media screen and (max-width: 1199px){
 
   .square {
@@ -356,8 +364,8 @@ header .logo img, .logo-img {
   }
   /* CALENDARIO */
 .calendario {
-  background-position: center right;
-  background-size: 90% 100%;
+  background-position: center 25%;
+  background-size: 150% 100%;
 }
 } 
 
@@ -372,6 +380,10 @@ header .logo img, .logo-img {
     margin-top: 20px;
   }
   
+    .calendario {
+    background-position: 47%;
+    background-size: 280% 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -391,10 +403,7 @@ header .logo img, .logo-img {
     background-image: url('../assets/images/blue-wall-1179x2556.jpg');
 
   }
-  .calendario {
-    background-position: 50%;
-    background-size: 300% 100%;
-  }
+
 }
 @media (max-height: 760px) and (max-width: 1480px) {
     header .title h1 {
@@ -409,7 +418,11 @@ header .logo img, .logo-img {
   header .logo {
     position: relative;
   }
-
+  .calendario{
+    background-image: url('../assets/images/pan-muerto-movil.jpg');
+    background-position: 52%;
+    background-size: 450% 100%;
+  }
   .square {
     margin-bottom: 20px;
   }
