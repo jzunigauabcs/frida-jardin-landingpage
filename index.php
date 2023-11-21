@@ -1,5 +1,31 @@
+<?php
+session_start();
+
+// Obtener el idioma actual del usuario (por ejemplo, desde una variable de sesión)
+$userLanguage = isset($_SESSION['language']) ? $_SESSION['language'] : 'en';
+
+
+
+function translate($key) {
+  global $translations;
+  return isset($translations[$key]) ? $translations[$key] : $key;
+}
+
+// Verificar si se cambió el idioma a través del formulario
+if (isset($_POST['change_language'])) {
+    $userLanguage = $_POST['language'];
+    $_SESSION['language'] = $userLanguage;
+}
+
+// Función para mostrar texto traducido
+
+// Incluir el archivo de traducciones correspondiente al idioma actual
+include 'lang/' . $userLanguage . '.php';
+
+// Resto de tu código HTML/PHP...
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +34,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="css/style.css" rel="stylesheet">
 
-    <title>Frida en su jardín secreto</title>
+    <title><?php echo translate('title')?></title>
 </head>
 <body>
 
@@ -17,13 +43,7 @@
   <div id="boton-boletos" class="position-fixed top-50 end-0 translate-middle-y z-3">
     <a href="" class="btn btn-primary border-0 btn-lg boletos-btn">
         <div class="row px-3 ">
-            B<br>
-            O<br>
-            L<br>
-            E<br>
-            T<br>
-            O<br>
-            S<br>
+            <?php echo translate('btn-boletos')?>
         </div>
         
     </a>
@@ -32,7 +52,20 @@
 
   <!-- INICIO / HEADER -->
   <div id="inicio" class="container-fluid section-wall-bg px-0 pt-0">
+    <!-- LENGUAJE -->
+    
+    <form method="post">
+      <div id="lenguaje" class="position-absolute top-0 end-0 col-1">
+        <select name="language" id="language" onchange="this.form.submit()">
+            <option value="en" <?php echo ($userLanguage == 'en') ? 'selected' : ''; ?>>English</option>
+            <option value="es" <?php echo ($userLanguage == 'es') ? 'selected' : ''; ?>>Español</option>
+            <!-- Agregar más opciones de idioma según sea necesario -->
+        </select>
+        <input type="hidden" name="change_language" value="1">
+      </div>
+    </form>
 
+    <!-- LENGUAJE END -->
     <!-- LOGO -->
     <div class="container-fluid ps-0">
       <div class="row">
@@ -43,22 +76,22 @@
         <div class="container col-8 d-none d-lg-block text-center">
           <div class="row align-items-end h-100 gx-3 menu-option">
             <div class="col">
-              <a href="#tu-visita" class="link-light link-underline link-underline-opacity-0"><p class="h4">Planea tu visita</p></a>
+              <a href="#tu-visita" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-visit') ?></p></a>
             </div>
             <div class="col">
-              <a href="#boletos" class="link-light link-underline link-underline-opacity-0"><p class="h4">Boletos</p></a>
+              <a href="#boletos" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-tickets') ?></p></a>
             </div>
             <div class="col">
-              <a href="#jardin-secreto" class="link-light link-underline link-underline-opacity-0"><p class="h4">Jardín Secreto</p></a>
+              <a href="#jardin-secreto" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-garden') ?></p></a>
             </div>
             <div class="col">
-              <a href="#calendario" class="link-light link-underline link-underline-opacity-0"><p class="h4">Eventos</p></a>
+              <a href="#calendario" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-events') ?></p></a>
             </div>
             <div class="col">
-              <a href="#grupos" class="link-light link-underline link-underline-opacity-0"><p class="h4">Grupos</p></a>
+              <a href="#grupos" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-groups') ?></p></a>
             </div>
             <div class="col">
-              <a href="#servicios" class="link-light link-underline link-underline-opacity-0"><p class="h4">Servicios</p></a>
+              <a href="#servicios" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-services') ?></p></a>
             </div>
           
           </div>
@@ -72,12 +105,12 @@
                   <i class="bi bi-list list-font"></i>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#tu-visita">Planea tu visita</a></li>
-                  <li><a class="dropdown-item" href="#boletos">Boletos</a></li>
-                  <li><a href="#jardin-secreto" class="dropdown-item">Jardín Secreto</a></li>
-                  <li><a href="#calendario" class="dropdown-item">Eventos</a></li>
-                  <li><a class="dropdown-item" href="#grupos">Grupos</a></li>
-                  <li><a class="dropdown-item" href="#servicios">Servicios</a></li>
+                  <li><a class="dropdown-item" href="#tu-visita"><?php echo translate('section-visit') ?></a></li>
+                  <li><a class="dropdown-item" href="#boletos"><?php echo translate('section-tickets') ?></a></li>
+                  <li><a href="#jardin-secreto" class="dropdown-item"><?php echo translate('section-garden') ?></a></li>
+                  <li><a href="#calendario" class="dropdown-item"><?php echo translate('section-events') ?></a></li>
+                  <li><a class="dropdown-item" href="#grupos"><?php echo translate('section-groups') ?></a></li>
+                  <li><a class="dropdown-item" href="#servicios"><?php echo translate('section-services') ?></a></li>
                 </ul>
               </div>
             </div>
@@ -98,7 +131,7 @@
             <div class="frame-1">
               <div class="frame-2">
                 <div class="presentation">
-                    <h2>La interpretación del<br><span>Jardín de Frida</span><br>ahora en<br>La Paz, B.C.S</h2>
+                    <h2><?php echo translate('main-presentation') ?></h2>
                     <p class="sub-text">Carretera Escénica esq. Campeche,<br>Colina del Sol 23010, La Paz B.C.S.</p>
                 </div>
               </div>
@@ -119,8 +152,8 @@
             <div class="frame-1">
               <div class="frame-2">
                 <div class="presentation">
-                  <h2>Adquiere tus boletos</h2>
-                  <a href="#" class="btn btn-primary btn-lg border-0 py-3 comprar-btn">Comprar</a>
+                  <h2><?php echo translate('main-tickets') ?></h2>
+                  <a href="#" class="btn btn-primary btn-lg border-0 py-3 comprar-btn"><?php echo translate('btn-buy') ?></a>
                 </div>
               </div>
             </div>
@@ -165,7 +198,7 @@
       <div class="row align-items-start poppins-regular">
         
         <div class="col-sm-12 col-md-12 col-lg-5 px-5">
-          <h1 class="pink-title pb-5 txt-titulo lobster">Planea tu visita</h1>
+          <h1 class="pink-title pb-5 txt-titulo lobster"><?php echo translate('section-visit') ?></h1>
           <h5 class="py-3 poppins">Horarios</h5>
           <div class="row">
               <p>Lunes a domingo: 8:00 am - 8:00 pm</p>
@@ -209,7 +242,7 @@
     <div class="container section-padding">
       <div id="boletos-parte-1" class="row align-items-start">
         <div class="col-sm-12 col-md-12 px-5 pb-4">
-          <h1 class="white-title txt-titulo lobster">Boletos</h1>	
+          <h1 class="white-title txt-titulo lobster"><?php echo translate('section-tickets') ?></h1>	
           <hr class="linea-horizontal-blanca"/>
         </div>
 
@@ -276,27 +309,17 @@
                   <div class="row">
                     <div class="col px-5">
                       <div class="row py-5">
-                        <h1 class="white-title lobster">Frida en su Jardín Secreto</h1>
+                        <h1 class="white-title lobster"><?php echo translate('title') ?></h1>
                       </div>
                       <div class="row pb-5">
                         <p class="slider-p too-much-text">
-                          Descubre la fuente de inspiración de Frida Kahlo
-                          en sus pinturas y autorretratos en un recorrido
-                          excepcional. 
+                          <?php echo translate('slider-page-1-txt-1') ?>
                         </p>
                         <p class="slider-p too-much-text">
-                          La Casa Azul, ubicada en Coyoacán, una de las
-                          zonas más antiguas y tradicionales de la Ciudad
-                          de México, se destaca por los altos muros de un
-                          brillante color azul cobalto, tras los cuales se
-                          asoman árboles centenarios que crean un dosel
-                          protector para un jardín
-                          de exuberante vegetación.
+                          <?php echo translate('slider-page-1-txt-2') ?>
                         </p>
                         <p class="slider-p too-much-text">
-                          Esta exposición descubre la profunda conexión de
-                          Frida con la vegetación nativa de México y el
-                          mundo natural.
+                          <?php echo translate('slider-page-1-txt-3') ?>
                         </p>
                       </div>
                     </div>
@@ -315,28 +338,17 @@
                   <div class="row">
                     <div class="col px-5">
                       <div class="row py-5">
-                        <h1 class="white-title lobster">Frida en su Jardín Secreto</h1>
+                        <h1 class="white-title lobster"><?php echo translate('title') ?></h1>
                       </div>
                       <div class="row pb-5">
                         <p class="slider-p too-much-text">
-                          Este espacio singular, hogar e inspiración de Frida
-                          Kahlo y Diego Rivera, te transportará a un mundo
-                          mágico. 
+                          <?php echo translate('slider-page-2-txt-1') ?>
                         </p>
                         <p class="slider-p too-much-text">
-                          Instalado en el marco incomparable de La Paz,
-                          B.C.S. a la sombra de palmeras y repleto de plantas
-                          nativas mexicanas, follaje tropical y plantas del
-                          desierto; los visitantes están invitados a explorar
-                          los lugares emblemáticos del jardín de Frida en su
-                          Casa Azul; como la pirámide que exhibe la
-                          colección de piezas
-                          prehispánicas de Diego Rivera, la fuente con
-                          temática de ranas y el escritorio y caballete de la
-                          artista.
+                          <?php echo translate('slider-page-2-txt-2') ?>
                         </p>
                         <p class="slider-p too-much-text">
-                          ¡Ven y déjate llevar por esta experiencia única!
+                          <?php echo translate('slider-page-2-txt-3') ?>
                         </p>
                       </div>
                     </div>
@@ -355,26 +367,17 @@
                   <div class="row">
                     <div class="col px-5">
                       <div class="row py-5">
-                        <h1 class="white-title lobster">Frida en su Jardín Secreto</h1>
+                        <h1 class="white-title lobster"><?php echo translate('title') ?></h1>
                       </div>
                       <div class="row pb-5">
                         <p class="slider-p too-much-text">
-                          Sus plantas, esculturas y diseño te sumergirán en
-                          una experiencia inolvidable que celebra la cultura
-                          mexicana y nuestra identidad histórica y presente.
+                          <?php echo translate('slider-page-3-txt-1') ?>
                         </p>
                         <p class="slider-p too-much-text">
-                          La exposición también contará con seis animales
-                          monumentales dispuestos en sitios clave del
-                          exuberante jardín: un xolo, un mono, un venado,
-                          una mariposa, un loro y un colibrí que a menudo
-                          aparecen en las obras de arte de Frida, como
-                          testimonio de su pasión por el arte popular
-                          mexicano y el arte prehispánico.
+                          <?php echo translate('slider-page-3-txt-2') ?>
                         </p>
                         <p class="slider-p too-much-text">
-                          ¡Una experiencia inolvidable que te acercará a la
-                          artista mexicana más universal! 
+                          <?php echo translate('slider-page-3-txt-3') ?>
                         </p>
                       </div>
                     </div>
@@ -487,32 +490,32 @@
   <!-- GRUPOS -->
   <div id="grupos" class="container-fluid px-0 bg-white">
     <div class="container section-padding">
-        <h1 class="pink-title pb-5 txt-titulo lobster">Grupos</h1>
+        <h1 class="pink-title pb-5 txt-titulo lobster"><?php echo translate('section-groups') ?></h1>
         
         <div class="row pt-5">
           <div class="col-sm-12 col-lg-4 text-wrap poppins">
-            <h5>Escolares</h5>
+            <h5><?php echo translate('groups-txt-school') ?></h5>
           </div>
           <div class="col-sm-12 col-lg-8 px-5 custom-border-start poppins-regular">
-            <p class="pb-4">Disfrútala en los jardínes de la exposición según tu escolaridad (preescolar, primaria, secundaria, preparatoria, educación superior y especialistas).</p>
+            <p class="pb-4"><?php echo translate('groups-school') ?></p>
           </div>
         </div>
         
         <div class="row">
           <div class="col-sm-12 col-lg-4 text-wrap poppins">
-            <h5>Nuestra comunidad</h5>
+            <h5><?php echo translate('groups-txt-community') ?></h5>
           </div>
           <div class="col-sm-12 col-lg-8 px-5 custom-border-start poppins-regular">
-            <p class="pb-4">Comprometidos con nuestra comunidad, ofrecemos visitas para adultos mayores, casas hogar y personas con discapacidad intelectual, visual, auditiva y motriz.</p>
+            <p class="pb-4"><?php echo translate('groups-community') ?></p>
           </div>
         </div>
         
         <div class="row">
           <div class="col-sm-12 col-lg-4 text-wrap poppins">
-            <h5>Privados y empresariales</h5>
+            <h5><?php echo translate('groups-txt-private') ?></h5>
           </div>
           <div class="col-sm-12 col-lg-8 px-5 custom-border-start poppins-regular">
-            <p>Disfruta de las historias de quienes habitaron en esta casa y del mundo en el que vivió Frida, bajo la sombra de los árboles bajo los cuales ella misma se paseaba.</p>
+            <p><?php echo translate('groups-private') ?></p>
           </div>
         </div>
     </div>
@@ -523,7 +526,7 @@
   <div id="servicios" class="container-fluid section-wall-bg section-padding px-0 py-0">
 
     <div class="container d-none">
-      <h1 class="white-title txt-titulo lobster">Servicios</h1>
+      <h1 class="white-title txt-titulo lobster"><?php echo translate('section-services') ?></h1>
     </div>
 
     <div class="container-fluid px-0 pb-5">
@@ -538,10 +541,10 @@
                       <div class="frame-2">
                         <div class="presentation">
                           <div class="row">
-                            <h2>La Rosita<br>Restaurante<br>Pulquería</h2>
+                            <h2><?php echo translate('services-block-rosita') ?></h2>
                           </div>
                           <div class="row blue-content">
-                            <p>Próximamente</p>
+                            <p><?php echo translate('layout-date-upcoming') ?></p>
                           </div>
                         </div>
                       </div>
@@ -554,15 +557,12 @@
                       <div class="frame-2">
                         <div class="presentation">
                           <div class="row">
-                            <h2>Tienda</h2>
+                            <h2><?php echo translate('layout-shop') ?></h2>
                           </div>
                           <div class="row services-poppins">
-                            <p>Quédate con algo de
-                            Frida: joyería,
-                            souvenirs, libros de
-                            arte y mucho más.</p>
-                            <p class="blue-content"><b>Lunes a Domingo</b><br>
-                            8:00 am – 8:00 pm</p>
+                            <p><?php echo translate('services-block-shop') ?></p>
+                            <p class="blue-content"><b><?php echo translate('layout-date-mon-sun') ?></b><br>
+                            <?php echo translate('layout-hour-8-20') ?></p>
                           </div>
                         </div>
                       </div>
@@ -575,14 +575,12 @@
                       <div class="frame-2">
                         <div class="presentation">
                           <div class="row">
-                            <h2>DoceCuarenta<br>Cafetería</h2>
+                            <h2><?php echo translate('services-block-doce') ?></h2>
                           </div>
                           <div class="row services-poppins">
-                            <p>Disfruta de las
-                              delicias que te
-                              ofrecemos.</p>
-                            <p class="blue-content"><b>Lunes a Domingo</b><br>
-                            8:00 am – 8:00 pm</p>
+                            <p><?php echo translate('services-block-doce-txt') ?></p>
+                            <p class="blue-content"><b><?php echo translate('layout-date-mon-sun') ?></b><br>
+                            <?php echo translate('layout-hour-8-20') ?></p>
                           </div>
                         </div>
                       </div>
@@ -603,7 +601,7 @@
     <div class="container">
       
       <div class="row">
-        <h1 class="txt-titulo text-break pink-title lobster">Contáctanos</h1>
+        <h1 class="txt-titulo text-break pink-title lobster"><?php echo translate('section-contact') ?></h1>
 
       </div>      
       <div class="row">  
@@ -614,22 +612,22 @@
         </div>
         <div id="contactanos" class="col-sm-12 col-md-12 col-lg-6 p-5 poppins-regular">
           <div class="row">
-            <p class="pb-3">Te decimos cómo llegar desde donde estés.</p>
+            <p class="pb-3"><?php echo translate('contact-txt-arrive') ?></p>
           </div>
           <div class="row">
-            <h6 class="contactanos-datos">Dirección</h6><br><p>Carretera Escénica esq. Campeche, Colina del Sol, 23010 La Paz.</p>
+            <h6 class="contactanos-datos"><?php echo translate('contact-txt-address') ?></h6><br><p><?php echo translate('contact-address') ?></p>
           </div>
           <div class="row">
-            <h6 class="contactanos-datos">Teléfono</h6><br><p>55 5405 2620</p>
+            <h6 class="contactanos-datos"><?php echo translate('contact-txt-phone') ?></h6><br><p>55 5405 2620</p>
           </div>
           <div class="row text-wrap pb-3">
-            <h6 class="contactanos-datos">Correo</h6><br><p class="text-break">contacto@fridaensujardinsecreto.com</p>
+            <h6 class="contactanos-datos"><?php echo translate('contact-txt-mail') ?></h6><br><p class="text-break">contacto@fridaensujardinsecreto.com</p>
           </div>
           <form class="pb-5">
             <div class="row">
               <div class="col-md-3">
                 <div class="mb-3">
-                  <label for="nombre" class="form-label">Nombre:</label>
+                  <label for="nombre" class="form-label"><?php echo translate('contact-txt-name') ?>:</label>
                 </div>
               </div>
               <div class="col-md-9">
@@ -641,7 +639,7 @@
             <div class="row">
               <div class="col-md-3">
                 <div class="mb-3">
-                  <label for="correo" class="form-label">Correo:</label>
+                  <label for="correo" class="form-label"><?php echo translate('contact-txt-mail') ?>:</label>
                 </div>
               </div>
               <div class="col-md-9">
@@ -653,7 +651,7 @@
             <div class="row">
               <div class="col-md-3">
                 <div class="mb-3">
-                  <label for="mensaje" class="form-label">Mensaje:</label>
+                  <label for="mensaje" class="form-label"><?php echo translate('contact-txt-message') ?>:</label>
                 </div>
               </div>
               <div class="col-md-9">
@@ -664,16 +662,16 @@
             </div>
             <div id="contactanos-terminos-condiciones"class="mb-3 form-check pb-3">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Acepto que los datos enviados se recopilen y almacenen.</label>
+              <label class="form-check-label" for="exampleCheck1"><?php echo translate('contact-txt-agree') ?></label>
             </div>
-            <button type="submit" class="btn btn-primary rounded-pill border-0 px-4 bg-pink">Enviar</button>
+            <button type="submit" class="btn btn-primary rounded-pill border-0 px-4 bg-pink"><?php echo translate('btn-send') ?></button>
           </form>
           <div id="oferta-trabajo" class="p-3 rounded-4 bg-5">
-            <p class="m-0">¿Te gusta el arte?</p>
-            <p class="m-0">¿Te gusta trabajar con niños, adolescentes y adultos?</p>
-            <p class="m-0">Experimenta la emoción de ser parte de Frida en su Jardín Secreto.</p>
-            <p class="m-0">Únete a nuestro equipo de guías y educadores.</p>
-            <p class="m-0 text-break">Informes en: correo@fridaensujardínsecreto.com</p>
+            <p class="m-0"><?php echo translate('contact-txt-offer-1') ?></p>
+            <p class="m-0"><?php echo translate('contact-txt-offer-2') ?></p>
+            <p class="m-0"><?php echo translate('contact-txt-offer-3') ?></p>
+            <p class="m-0"><?php echo translate('contact-txt-offer-4') ?></p>
+            <p class="m-0 text-break"><?php echo translate('contact-txt-offer-5') ?></p>
           </div>
         </div>
       </div>
