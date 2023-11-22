@@ -55,7 +55,7 @@ include 'lang/' . $userLanguage . '.php';
     <!-- LENGUAJE -->
     
     <form method="post">
-      <div id="lenguaje" class="position-absolute top-0 end-0 col-1">
+      <div id="lenguaje" class="position-absolute top-0 end-0 col-1 d-none d-lg-block">
         <select name="language" id="language" onchange="this.form.submit()">
             <option value="en" <?php echo ($userLanguage == 'en') ? 'selected' : ''; ?>>English</option>
             <option value="es" <?php echo ($userLanguage == 'es') ? 'selected' : ''; ?>>Español</option>
@@ -111,6 +111,16 @@ include 'lang/' . $userLanguage . '.php';
                   <li><a href="#calendario" class="dropdown-item"><?php echo translate('section-events') ?></a></li>
                   <li><a class="dropdown-item" href="#grupos"><?php echo translate('section-groups') ?></a></li>
                   <li><a class="dropdown-item" href="#servicios"><?php echo translate('section-services') ?></a></li>
+                  <li>
+                    <form method="post">
+                        <select name="language" id="language" class="dropdown-item" onchange="this.form.submit()">
+                            <option value="en" <?php echo ($userLanguage == 'en') ? 'selected' : ''; ?>>English</option>
+                            <option value="es" <?php echo ($userLanguage == 'es') ? 'selected' : ''; ?>>Español</option>
+                            <!-- Agregar más opciones de idioma según sea necesario -->
+                        </select>
+                        <input type="hidden" name="change_language" value="1">
+                    </form>
+                  </li>
                 </ul>
               </div>
             </div>

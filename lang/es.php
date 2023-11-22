@@ -15,7 +15,13 @@
         'section-contact' => 'Contáctanos',
 
         /*** LAYOUTS : BUTTONS ***/
-        'btn-boletos' => 'B<br>O<br>L<br>E<br>T<br>O<br>S<br>',
+        'btn-boletos' => 'B<br>
+                          O<br>
+                          L<br>
+                          E<br>
+                          T<br>
+                          O<br>
+                          S<br>',
         'btn-buy' => 'Comprar',
         'btn-send' => 'Enviar',
 
