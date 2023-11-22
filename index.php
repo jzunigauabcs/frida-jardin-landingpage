@@ -199,33 +199,33 @@ include 'lang/' . $userLanguage . '.php';
         
         <div class="col-sm-12 col-md-12 col-lg-5 px-5">
           <h1 class="pink-title pb-5 txt-titulo lobster"><?php echo translate('section-visit') ?></h1>
-          <h5 class="py-3 poppins">Horarios</h5>
+          <h5 class="py-3 poppins"><?php echo translate('visit-txt-schedules') ?></h5>
           <div class="row">
-              <p>Lunes a domingo: 8:00 am - 8:00 pm</p>
+              <p><?php echo translate('visit-schedules') ?></p>
           </div>
           <div class="vertical-line"></div>
         </div>
 
         <div class="col-sm-12 col-md-12 col-lg-3 px-5 custom-border-start">
-          <h5 class="pt-2 poppins">Tarifas</h5>
+          <h5 class="pt-2 poppins"><?php echo translate('visit-txt-admissions') ?></h5>
           <div class="row py-3">
-            <h5 class="pb-3 tu-visita-tarifas">Entrada general</h5>
-            <div class="mb-1"><p><span class="poppins">$180</span> Nacionales y residentes</p></div>
-            <div class="mb-1"><p><span class="poppins">$360</span> Extranjeros</p></div>
-            <div class="mb-1"><p><span class="poppins">$100</span> Tercera edad y capacidades diferentes</p></div>
-            <div class="mb-1"><p><span class="poppins">$60</span> Maestros y estudiantes</p></div>
+            <h5 class="pb-3 tu-visita-tarifas"><?php echo translate('visit-admission-txt-general') ?></h5>
+            <div class="mb-1"><p><?php echo translate('visit-admission-national') ?></p></div>
+            <div class="mb-1"><p><?php echo translate('visit-admission-foreign') ?></p></div>
+            <div class="mb-1"><p><?php echo translate('visit-admission-special') ?></p></div>
+            <div class="mb-1"><p><?php echo translate('visit-admission-scholar') ?></p></div>
           </div>
           <div class="row py-3">
-            <h5 class="pb-3 tu-visita-tarifas">Tour operadores</h5>
-            <div class="mb-1"><p><span class="poppins">15%</span> de descuento</p></div>
+            <h5 class="pb-3 tu-visita-tarifas"><?php echo translate('visit-txt-tour') ?></h5>
+            <div class="mb-1"><p><?php echo translate('visit-tour-discount') ?></p></div>
           </div>
         </div>
     
         <div class="col-sm-12 col-md-12 col-lg-4 px-5">
           
           <div class="row py-3">
-            <h5 class="pb-3 tu-visita-tarifas">Acceso gratuito</h5>
-            <div class="mb-1"><p>Niños menores de 6 años, acompañados por un adulto</p></div>
+            <h5 class="pb-3 tu-visita-tarifas"><?php echo translate('visit-txt-free') ?></h5>
+            <div class="mb-1"><p><?php echo translate('visit-free-kids') ?></p></div>
           </div>
 
           <div class="row">
@@ -248,22 +248,22 @@ include 'lang/' . $userLanguage . '.php';
 
         <div class="col-sm-12 col-md-12 col-lg-6 px-5 text-white pb-4 poppins">
           <div class="row">
-            <p>Elige el horario en el que quieras visitar la exposición de Frida en su Jardín Secreto, realiza la compra, descarga tu boleto y preséntate directo en la fila para el acceso:</p>
+            <p><?php echo translate('tickets-description') ?></p>
           </div>
 
-          <h5 class="py-3">Horarios</h5>
+          <h5 class="py-3"><?php echo translate('tickets-schedules') ?></h5>
 
           <div class="row">
-            <p class="mb-1 poppins-regular">Lunea a domingo: 8:00 am - 8:00 pm</p>
+            <p class="mb-1 poppins-regular"><?php echo translate('layout-date-mon-sun') ?>: <?php echo translate('layout-hour-8-20') ?></p>
           </div>
 
           <div id="boletos-parte-2" class="row pt-5">
-            <p>Para mantenerte seguro y obtener la mejor experiencia apóyanos a seguir estos pasos:</p>
+            <p><?php echo translate('tickets-steps') ?></p>
             <ul class="px-5">
-              <li>Respeta tu horario de entrada, ya que no podrás ingresar en otro horario. </li>
-              <li>Procura el pago con tarjeta de crédito o débito en los servicios de la exposición.</li>
+              <li><?php echo translate('tickets-step-1') ?></li>
+              <li><?php echo translate('tickets-step-2') ?></li>
             </ul>
-            <p>Gracias por ayudarnos a mantener la exposición sana.</p>
+            <p><?php echo translate('tickets-thanks') ?></p>
           </div>
         </div>
 
@@ -272,18 +272,18 @@ include 'lang/' . $userLanguage . '.php';
             <img src="./assets/images/Calendario.png" class="img-fluid d-none" alt="">
 
             <div id="boletos-parte-2" class="row">                 
-              <p>No pueden ser ingresados al recinto:</p>
+              <p><?php echo translate('tickets-notallowed') ?></p>
               <ul class="px-5">
-                <li>Objetos punzocortantes o armas de fuego</li>
-                <li>Maletas</li>
-                <li>Mascotas</li>
-                <li>Bebidas</li>
+                <li><?php echo translate('tickets-notallowed-1') ?></li>
+                <li><?php echo translate('tickets-notallowed-2') ?></li>
+                <li><?php echo translate('tickets-notallowed-3') ?></li>
+                <li><?php echo translate('tickets-notallowed-4') ?></li>
               </ul>
 
-              <p>Una vez dentro de la exposición:</p>
+              <p><?php echo translate('tickets-onceinside') ?></p>
               <ul class="px-5">
-                <li>Respeta las áreas delimitadas </li>
-                <li>No toques ninguno de los objetos expuestos</li>
+                <li><?php echo translate('tickets-onceinside-1') ?></li>
+                <li><?php echo translate('tickets-onceinside-2') ?></li>
               </ul>
             </div>
           </div>
@@ -414,7 +414,7 @@ include 'lang/' . $userLanguage . '.php';
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-10 col-lg-7 bg-orange custom-border">
-          <h1 class="white-title p-3 txt-titulo lobster">Conoce nuestros eventos y talleres del "Día de Muertos"</h1>
+          <h1 class="white-title p-3 txt-titulo lobster"><?php echo translate('events-header') ?></h1>
         </div>
       </div>
     </div>
@@ -425,51 +425,51 @@ include 'lang/' . $userLanguage . '.php';
 
           <div class="row p-3" style="border-bottom: 3px dotted white;">
             <div class="col-sm-12 col-lg-2 text-wrap lobster">
-              <h5>1 de noviembre</h5>
+              <h5><?php echo translate('events-date-1') ?></h5>
             </div>
             <div class="col-sm-12 col-lg-10 poppins" style="padding-left: 30px;">
-              <p class="p-0 m-0"> <span class="orange-text">“Inauguración ofrenda monumental”</span><br> Día de Muertos en honor a Frida</p>
+              <p class="p-0 m-0"> <?php echo translate('events-activity-1') ?></p>
             </div>
           </div>
 
           <div class="row p-3" style="border-bottom: 3px dotted white;">
             <div class="col-sm-12 col-lg-2 text-wrap lobster">
-              <h5>4 y 5 de noviembre</h5>
+              <h5><?php echo translate('events-date-2') ?></h5>
             </div>
             <div class="col-sm-12 col-lg-10 poppins"  style="padding-left: 30px;">
-              <p class="p-0 m-0">Actividad</p>
-              <p class="p-0 m-0">*<span class="orange-text">“Pinta tu calaverita”</span></p>
-              <p class="p-0 m-0">*<span class="orange-text">La 'pa guie'</span> Corona de Flores de Cempasuchil</p>
+              <p class="p-0 m-0"><?php echo translate('events-txt-activity') ?></p>
+              <p class="p-0 m-0">* <?php echo translate('events-activity-2-1') ?></p>
+              <p class="p-0 m-0">* <?php echo translate('events-activity-2-2') ?></p>
             </div>
           </div>
 
           <div class="row p-3" style="border-bottom: 3px dotted white;">
             <div class="col-sm-12 col-lg-2 text-wrap lobster">
-              <h5>9 de noviembre</h5>
+              <h5><?php echo translate('events-date-3') ?></h5>
             </div>
             <div class="col-sm-12 col-lg-10 poppins" style="padding-left: 30px;">
-              <p class="p-0 m-0"><span class="orange-text">“Smoke & Spirits”</span> Ceremonia de <br> Sahumerio y clase de Mixología con flores de Cempasúchil </p>
+              <p class="p-0 m-0"><?php echo translate('events-activity-3') ?></p>
             </div>
           </div>
 
           <div class="row p-3" style="border-bottom: 3px dotted white;">
             <div class="col-sm-12 col-lg-2 text-wrap lobster">
-              <h5>11 de noviembre</h5>
+              <h5><?php echo translate('events-date-4') ?></h5>
             </div>
             <div class="col-sm-12 col-lg-10 poppins" style="padding-left: 30px;">
-              <p class="p-0 m-0">Exploratorio de Arte y Literatura <br><span class="orange-text">“Frida y Diego en el Jardín de las Calaveras”</span></p>
+              <p class="p-0 m-0"><?php echo translate('events-activity-4') ?></p>
             </div>
           </div>
 
           <div class="row p-3">
             <div class="col-sm-12 col-lg-2 text-wrap lobster">
-              <h5>18, 19, 25 y 26 de noviembre</h5>
+              <h5><?php echo translate('events-date-5') ?></h5>
             </div>
             <div class="col-sm-12 col-lg-10 poppins" style="padding-left: 30px;">
-              <p class="p-0 m-0">Actividad</p>
-              <p class="p-0 m-0">*<span class="orange-text">“Pinta tu calaverita”</span></p>
-              <p class="p-0 m-0">*<span class="orange-text">La 'pa guie'</span> Corona de Flores de Cempasuchil</p>
-              <p class="pt-4 m-0" style="font-size: 15px;">Solicita información en nuestras redes</p>
+              <p class="p-0 m-0"><?php echo translate('events-txt-activity') ?></p>
+              <p class="p-0 m-0">* <?php echo translate('events-activity-5-1') ?></p>
+              <p class="p-0 m-0">* <?php echo translate('events-activity-5-2') ?></p>
+              <p class="pt-4 m-0" style="font-size: 15px;"><?php echo translate('events-info') ?></p>
             </div>
           </div>
         </div>
@@ -618,7 +618,7 @@ include 'lang/' . $userLanguage . '.php';
             <h6 class="contactanos-datos"><?php echo translate('contact-txt-address') ?></h6><br><p><?php echo translate('contact-address') ?></p>
           </div>
           <div class="row">
-            <h6 class="contactanos-datos"><?php echo translate('contact-txt-phone') ?></h6><br><p>55 5405 2620</p>
+            <h6 class="contactanos-datos"><?php echo translate('contact-txt-phone') ?></h6><br><p>612 128 8032</p>
           </div>
           <div class="row text-wrap pb-3">
             <h6 class="contactanos-datos"><?php echo translate('contact-txt-mail') ?></h6><br><p class="text-break">contacto@fridaensujardinsecreto.com</p>
@@ -700,40 +700,40 @@ include 'lang/' . $userLanguage . '.php';
           <div class="row">
             <div class="col-12 col-lg-4">
               <div class="row pb-3">
-                <p class="h1 footer-titles">Enlaces</p>
+                <p class="h1 footer-titles"><?php echo translate('layout-links') ?></p>
               </div>
               <div class="row pb-3">
-                <h4><a href="#tu-visita" class="link-light link-underline link-underline-opacity-0">Planea tu visita</a></h4>
+                <h4><a href="#tu-visita" class="link-light link-underline link-underline-opacity-0"><?php echo translate('section-visit') ?></a></h4>
               </div>
               <div class="row pb-3">
-                <h4><a href="#jardin-secreto" class="link-light link-underline link-underline-opacity-0">Jardín Secreto</a></h4>
+                <h4><a href="#jardin-secreto" class="link-light link-underline link-underline-opacity-0"><?php echo translate('section-garden') ?></a></h4>
               </div>
               <div class="row pb-3">
-                <h4><a href="#grupos" class="link-light link-underline link-underline-opacity-0">Grupos</a></h4>
+                <h4><a href="#grupos" class="link-light link-underline link-underline-opacity-0"><?php echo translate('section-groups') ?></a></h4>
               </div>
               <div class="row pb-3">
-                <h4><a href="#contactanos" class="link-light link-underline link-underline-opacity-0">Contacto</a></h4>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-4">
-              <div class="row pb-3">
-                <p class="h1 footer-titles">Tienda</p>
-              </div>
-              <div class="row pb-3">
-                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0">La Rosita Restaurante Pulquería</a></h4>
-              </div>
-              <div class="row pb-3">
-                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0">Tienda del jardín</a></h4>
-              </div>
-              <div class="row pb-3">
-                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0">DoceCuarenta Cafetería</a></h4>
+                <h4><a href="#contactanos" class="link-light link-underline link-underline-opacity-0"><?php echo translate('section-contact') ?></a></h4>
               </div>
             </div>
 
             <div class="col-12 col-lg-4">
               <div class="row pb-3">
-                <p class="h1 footer-titles">Social</p>
+                <p class="h1 footer-titles"><?php echo translate('layout-shop') ?></p>
+              </div>
+              <div class="row pb-3">
+                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0"><?php echo translate('layout-restaurant') ?></a></h4>
+              </div>
+              <div class="row pb-3">
+                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0"><?php echo translate('layout-garden-shop') ?></a></h4>
+              </div>
+              <div class="row pb-3">
+                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0"><?php echo translate('layout-coffee') ?></a></h4>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="row pb-3">
+                <p class="h1 footer-titles"><?php echo translate('layout-social') ?></p>
               </div>
               <div class="row pb-3">
                 <h4><a href="https://www.tiktok.com/@fridaensujardinsecreto" class="link-light link-underline link-underline-opacity-0">TIK TOK</a></h4>
@@ -801,10 +801,10 @@ include 'lang/' . $userLanguage . '.php';
     <div class="container">
       <div class="row py-3 text-center">
         <div class="col-6 col-md-3 extra">2023 Frida en su Jardín Secreto</div>
-        <div class="col-6 col-md-3 extra">Todos los derechos reservados</div>
+        <div class="col-6 col-md-3 extra"><?php echo translate('footer-copyright') ?></div>
         <div class="col-6 col-md-3">
           <button type="button" class="btn btn-primary no-button-style p-0 extra" data-bs-toggle="modal" data-bs-target="#avisoPrivacidad">
-            <p class="white-poppins m-0">Aviso de Privacidad</p>
+            <p class="white-poppins m-0"><?php echo translate('footer-privacy') ?></p>
           </button>
           <!-- Modal Aviso de Privacidad -->
           <div class="modal fade" id="avisoPrivacidad" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -842,7 +842,7 @@ include 'lang/' . $userLanguage . '.php';
         </div>
         <div class="col-6 col-md-3">
           <button type="button" class="btn btn-primary no-button-style p-0 extra" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <p class="white-poppins m-0" ;>Políticas de Cancelación</p>
+            <p class="white-poppins m-0" ;><?php echo translate('footer-cancellation') ?></p>
           </button>
           <!-- Modal Térmios de Uso-->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

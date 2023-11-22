@@ -24,6 +24,11 @@
         'layout-hour-8-20' => '8:00 a.m. – 8:00 p.m.',
         'layout-date-upcoming' => 'Próximamente',
         'layout-shop' => 'Tienda',
+        'layout-restaurant' => 'La Rosita Restaurante Pulquería',
+        'layout-garden-shop' => 'Tienda del jardín',
+        'layout-coffee' => 'DoceCuarenta Cafetería',
+        'layout-links' => 'Enlaces',
+        'layout-social' => 'Social',
 
         /*** MAIN ***/
         'main-presentation' => 'La interpretación del<br>
@@ -38,17 +43,31 @@
         'visit-schedules' => 'Lunes a domingo: 8:00 a.m. - 8:00 p.m.',
         'visit-txt-admissions' => 'Tarifas',
         'visit-admission-txt-general' => 'Entrada general',
-        'visit-admission-national' => '$180</span> Nacionales y residentes',
-        'visit-admission-foreign' => '$360</span> Extranjeros',
-        'visit-admission-special' => '$100</span> Tercera edad y capacidades diferentes',
-        'visit-admission-scholar' => '$60</span> Maestros y estudiantes',
+        'visit-admission-national' => '<span class="poppins">$180</span> Nacionales y residentes',
+        'visit-admission-foreign' => '<span class="poppins">$360</span> Extranjeros',
+        'visit-admission-special' => '<span class="poppins">$100</span> Tercera edad y capacidades diferentes',
+        'visit-admission-scholar' => '<span class="poppins">$60</span> Maestros y estudiantes',
         'visit-txt-tour' => 'Tour operadores',
-        'visit-tour-discount' => '15%</span> de descuento',
+        'visit-tour-discount' => '<span class="poppins">15%</span> de descuento',
         'visit-txt-free' => 'Acceso gratuito',
         'visit-free-kids' => 'Niños menores de 6 años, acompañados por un adulto',
 
         /*** TICKETS ***/
-
+        'tickets-description' => 'Elige el horario en el que quieras visitar la exposición de Frida en su Jardín Secreto, realiza la compra, descarga tu boleto y preséntate directo en la fila para el acceso:',
+        'tickets-schedules' => 'Horarios',
+        'tickets-steps' => 'Para mantenerte seguro y obtener la mejor experiencia apóyanos a seguir estos pasos:',
+        'tickets-step-1' => 'Respeta tu horario de entrada, ya que no podrás ingresar en otro horario.',
+        'tickets-step-2' => 'Procura el pago con tarjeta de crédito o débito en los servicios de la exposición.',
+        'tickets-thanks' => 'Gracias por ayudarnos a mantener la exposición sana.',
+        'tickets-notallowed' => 'No pueden ser ingresados al recinto:',
+        'tickets-notallowed-1' => 'Objetos punzocortantes o armas de fuego',
+        'tickets-notallowed-2' => 'Maletas',
+        'tickets-notallowed-3' => 'Mascotas',
+        'tickets-notallowed-4' => 'Bebidas',
+        'tickets-onceinside' => 'Una vez dentro de la exposición:',
+        'tickets-onceinside-1' => 'Respeta las áreas delimitadas',
+        'tickets-onceinside-2' => 'No toques ninguno de los objetos expuestos',
+        
         /*** SLIDER ***/
         'slider-page-1-txt-1' => 'Descubre la fuente de inspiración de Frida Kahlo
                                   en sus pinturas y autorretratos en un recorrido
@@ -93,6 +112,21 @@
                                   artista mexicana más universal!',
 
         /*** EVENTS ***/
+        'events-header' => 'Conoce nuestros eventos y talleres del "Día de Muertos"',
+        'events-txt-activity' => 'Actividad', 
+        'events-date-1' => '1 de noviembre',
+        'events-date-2' => '4 y 5 de noviembre',
+        'events-date-3' => '9 de noviembre',
+        'events-date-4' => '11 de noviembre',
+        'events-date-5' => '18, 19, 25 y 26 de noviembre',
+        'events-activity-1' => '<span class="orange-text">“Inauguración ofrenda monumental”</span><br> Día de Muertos en honor a Frida',
+        'events-activity-2-1' => '<span class="orange-text">“Pinta tu calaverita”</span>',
+        'events-activity-2-2' => '<span class="orange-text">La \'pa guie\'</span> Corona de Flores de Cempasuchil',
+        'events-activity-3' => '<span class="orange-text">“Smoke & Spirits”</span> Ceremonia de <br> Sahumerio y clase de Mixología con flores de Cempasúchil',
+        'events-activity-4' => 'Exploratorio de Arte y Literatura <br><span class="orange-text">“Frida y Diego en el Jardín de las Calaveras”</span>',
+        'events-activity-5-1' => '<span class="orange-text">“Pinta tu calaverita”</span>',
+        'events-activity-5-2' => '<span class="orange-text">La \'pa guie\'</span> Corona de Flores de Cempasuchil',
+        'events-info' => 'Solicita información en nuestras redes',
 
         /*** GROUPS ***/
         'groups-txt-school' => 'Escolares',
@@ -132,5 +166,8 @@
         'contact-txt-offer-5' => 'Informes en: correo@fridaensujardínsecreto.com',
 
         /*** FOOTER ***/
+        'footer-copyright' => 'Todos los derechos reservados',
+        'footer-privacy' => 'Aviso de Privacidad',
+        'footer-cancellation' => 'Políticas de Cancelación',
     );
 ?>
