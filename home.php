@@ -1,83 +1,57 @@
-<?php
-  include ('lang-change.php')
-?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-   
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-
-    <title><?php echo translate('title')?></title>
+    <?php include('layouts/head.template.php') ?>
 </head>
 <body>
 
   
   <!-- BOTÓN BOLETOS -->
   <div id="boton-boletos" class="position-fixed top-50 end-0 translate-middle-y z-3">
-    <a href="" class="btn btn-primary border-0 btn-lg boletos-btn">
+    <a href="https://fridaensujardinsecreto.com/producto/frida-khalo-recorrido/" class="btn btn-primary border-0 btn-lg boletos-btn">
         <div class="row px-3 ">
-            <?php echo translate('btn-boletos')?>
+            B<br>
+            O<br>
+            L<br>
+            E<br>
+            T<br>
+            O<br>
+            S<br>
         </div>
         
     </a>
   </div>
   <!-- BOTÓN BOLETOS END -->
 
-  <!-- BOTÓN WHATSAPP -->
-    <a href="https://wa.me/5216122210135" class="floating" target="_blank">
-      <i class="fab fa-whatsapp fab-icon"></i>
-    </a>
-  <!-- BOTÓN WHATSAPP END -->
-
   <!-- INICIO / HEADER -->
   <div id="inicio" class="container-fluid section-wall-bg px-0 pt-0">
-    <!-- LENGUAJE -->
-    
-    <form method="post">
-      <div id="lenguaje" class="position-absolute top-0 end-0 d-none d-lg-block">
-        <select name="language" id="language" class="form-select" onchange="this.form.submit()">
-            <option value="en" <?php echo ($userLanguage == 'en') ? 'selected' : ''; ?>>English</option>
-            <option value="es" <?php echo ($userLanguage == 'es') ? 'selected' : ''; ?>>Español</option>
-            <!-- Agregar más opciones de idioma según sea necesario -->
-        </select>
-        <input type="hidden" name="change_language" value="1">
-      </div>
-    </form>
 
-    <!-- LENGUAJE END -->
     <!-- LOGO -->
     <div class="container-fluid ps-0">
       <div class="row">
         <div class="col-2">
-          <img src="./assets/images/logo.png" class="logo-img" alt="">
+          <img src="<?php bloginfo('template_directory');?>/public/images/logo.png" class="logo-img" alt="">
         </div>
 
         <div class="container col-8 d-none d-lg-block text-center">
           <div class="row align-items-end h-100 gx-3 menu-option">
             <div class="col">
-              <a href="#tu-visita" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-visit') ?></p></a>
+              <a href="#tu-visita" class="link-light link-underline link-underline-opacity-0"><p class="h4">Planea tu visita</p></a>
             </div>
             <div class="col">
-              <a href="#boletos" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-tickets') ?></p></a>
+              <a href="#boletos" class="link-light link-underline link-underline-opacity-0"><p class="h4">Boletos</p></a>
             </div>
             <div class="col">
-              <a href="#jardin-secreto" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-garden') ?></p></a>
+              <a href="#jardin-secreto" class="link-light link-underline link-underline-opacity-0"><p class="h4">Jardín Secreto</p></a>
             </div>
-<!-- 
-            <div class="col">
-              <a href="#calendario" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-events') ?></p></a>
-            </div>
--->
-            <div class="col">
-              <a href="#grupos" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-groups') ?></p></a>
+			<div class="col">
+              <a href="#calendario" class="link-light link-underline link-underline-opacity-0"><p class="h4">Eventos</p></a>
             </div>
             <div class="col">
-              <a href="#servicios" class="link-light link-underline link-underline-opacity-0"><p class="h4"><?php echo translate('section-services') ?></p></a>
+              <a href="#grupos" class="link-light link-underline link-underline-opacity-0"><p class="h4">Grupos</p></a>
+            </div>
+            <div class="col">
+              <a href="#servicios" class="link-light link-underline link-underline-opacity-0"><p class="h4">Servicios</p></a>
             </div>
           
           </div>
@@ -91,22 +65,12 @@
                   <i class="bi bi-list list-font"></i>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#tu-visita"><?php echo translate('section-visit') ?></a></li>
-                  <li><a class="dropdown-item" href="#boletos"><?php echo translate('section-tickets') ?></a></li>
-                  <li><a href="#jardin-secreto" class="dropdown-item"><?php echo translate('section-garden') ?></a></li>
-                  <!-- <li><a href="#calendario" class="dropdown-item"><?php echo translate('section-events') ?></a></li> -->
-                  <li><a class="dropdown-item" href="#grupos"><?php echo translate('section-groups') ?></a></li>
-                  <li><a class="dropdown-item" href="#servicios"><?php echo translate('section-services') ?></a></li>
-                  <li>
-                    <form method="post">
-                        <select name="language" id="language" class="dropdown-item form-select" onchange="this.form.submit()">
-                            <option value="en" <?php echo ($userLanguage == 'en') ? 'selected' : ''; ?>>English</option>
-                            <option value="es" <?php echo ($userLanguage == 'es') ? 'selected' : ''; ?>>Español</option>
-                            <!-- Agregar más opciones de idioma según sea necesario -->
-                        </select>
-                        <input type="hidden" name="change_language" value="1">
-                    </form>
-                  </li>
+                  <li><a class="dropdown-item" href="#tu-visita">Planea tu visita</a></li>
+                  <li><a class="dropdown-item" href="#boletos">Boletos</a></li>
+                  <li><a href="#jardin-secreto" class="dropdown-item">Jardín Secreto</a></li>
+                  <li><a href="#calendario" class="dropdown-item">Eventos</a></li>
+                  <li><a class="dropdown-item" href="#grupos">Grupos</a></li>
+                  <li><a class="dropdown-item" href="#servicios">Servicios</a></li>
                 </ul>
               </div>
             </div>
@@ -117,7 +81,7 @@
     <!-- LOGO END -->
 
     <div class="container-fluid px-0 py-5">
-      <img src="./assets/images/red-stripe.png" class="img-fluid w-100 stripe" alt="">
+      <img src="<?php bloginfo('template_directory');?>/public/images/red-stripe.png" class="img-fluid w-100 stripe" alt="">
     </div>
 
     <div class="container-fluid pt-5">
@@ -127,7 +91,7 @@
             <div class="frame-1">
               <div class="frame-2">
                 <div class="presentation">
-                    <h2><?php echo translate('main-presentation') ?></h2>
+                    <h2>La interpretación del<br><span>Jardín de Frida</span><br>ahora en<br>La Paz, B.C.S</h2>
                     <p class="sub-text">Carretera Escénica esq. Campeche,<br>Colina del Sol 23010, La Paz B.C.S.</p>
                 </div>
               </div>
@@ -138,7 +102,7 @@
           <section class="square mx-auto">
             <div class="frame-1">
               <div class="frame-2">
-                <img src="./assets/images/autorretrato-sm.jpg" class="img-fluid" alt="">
+                <img src="<?php bloginfo('template_directory');?>/public/images/autorretrato-sm.jpg" class="img-fluid" alt="">
               </div>
             </div>
           </section>
@@ -148,8 +112,8 @@
             <div class="frame-1">
               <div class="frame-2">
                 <div class="presentation">
-                  <h2><?php echo translate('main-tickets') ?></h2>
-                  <a href="#" class="btn btn-primary btn-lg border-0 py-3 comprar-btn"><?php echo translate('btn-buy') ?></a>
+                  <h2>Adquiere tus boletos</h2>
+                  <a href="https://fridaensujardinsecreto.com/producto/frida-khalo-recorrido/" class="btn btn-primary btn-lg border-0 py-3 comprar-btn">Comprar</a>
                 </div>
               </div>
             </div>
@@ -167,22 +131,22 @@
           </div>
           <div class="row gx-0 pb-4">
             <div class="position-relative top-0 start-50 translate-middle-x">
-              <a href="https://www.instagram.com/fridaensujardinsecreto/"><img src="./assets/images/redes-instagram.png" alt="instagram" class="icon-social"></a>
-              <a href="https://www.facebook.com/profile.php?id=100092258479518"><img src="./assets/images/redes-facebook.png" alt="facebook" class="icon-social"></a>
-              <a href="https://es.linkedin.com/posts/frida-en-su-jardín-secreto_lapaz-bcs-bajacaliforniasur-activity-7090360276515966978-dpPz?trk=public_profile_like_view"><img src="./assets/images/redes-linkedin.png" alt="linkedin" class="icon-social"></a>
-              <a href="https://www.tiktok.com/@fridaensujardinsecreto"><img src="./assets/images/redes-tiktok.png" alt="tiktok" class="icon-social"></a>
-              <a href="https://www.instagram.com/fridaensujardinsecreto/"><img src="./assets/images/redes-x.png" alt="x" class="icon-social"></a>
+              <a href="https://www.instagram.com/fridaensujardinsecreto/"><img src="<?php bloginfo('template_directory');?>/public/images/redes-instagram.png" alt="instagram" class="icon-social"></a>
+              <a href="https://www.facebook.com/profile.php?id=100092258479518"><img src="<?php bloginfo('template_directory');?>/public/images/redes-facebook.png" alt="facebook" class="icon-social"></a>
+              <a href="https://es.linkedin.com/posts/frida-en-su-jardín-secreto_lapaz-bcs-bajacaliforniasur-activity-7090360276515966978-dpPz?trk=public_profile_like_view"><img src="<?php bloginfo('template_directory');?>/public/images/redes-linkedin.png" alt="linkedin" class="icon-social"></a>
+              <a href="https://www.tiktok.com/@fridaensujardinsecreto"><img src="<?php bloginfo('template_directory');?>/public/images/redes-tiktok.png" alt="tiktok" class="icon-social"></a>
+              <a href="https://www.instagram.com/fridaensujardinsecreto/"><img src="<?php bloginfo('template_directory');?>/public/images/redes-x.png" alt="x" class="icon-social"></a>
             </div>
           </div>
         </div>
         <div class="col-12 col-lg-2">
-          <img src="./assets/images/museo-frida-kahlo-seeklogo.com.jpg" alt="Museo Frida Kahlo" class="logo-museo start-50 position-relative top-0 translate-middle-x">
+          <img src="<?php bloginfo('template_directory');?>/public/images/museo-frida-kahlo-seeklogo.com.jpg" alt="Museo Frida Kahlo" class="logo-museo start-50 position-relative top-0 translate-middle-x">
         </div>
       </div>
     </div>
 
     <div class="container-fluid px-0">
-      <img src="./assets/images/red-stripe.png" class="img-fluid w-100 stripe" alt="">
+      <img src="<?php bloginfo('template_directory');?>/public/images/red-stripe.png" class="img-fluid w-100 stripe" alt="">
     </div>
   </div>
   <!-- INICIO / HEADER END-->
@@ -194,35 +158,49 @@
       <div class="row align-items-start poppins-regular">
         
         <div class="col-sm-12 col-md-12 col-lg-5 px-5">
-          <h1 class="pink-title pb-5 txt-titulo lobster"><?php echo translate('section-visit') ?></h1>
-          <h5 class="py-3 poppins"><?php echo translate('visit-txt-schedules') ?></h5>
+          <h1 class="pink-title pb-5 txt-titulo lobster">Planea tu visita</h1>
+          <h5 class="py-3 poppins">Horarios</h5>
           <div class="row">
-              <p><?php echo translate('visit-schedules') ?></p>
+              <p>Lunes a domingo: 8:00 am - 8:00 pm</p>
           </div>
           <div class="vertical-line"></div>
         </div>
 
         <div class="col-sm-12 col-md-12 col-lg-3 px-5 custom-border-start">
-          <h5 class="pt-2 poppins"><?php echo translate('visit-txt-admissions') ?></h5>
+          <h5 class="pt-2 poppins">Tarifas</h5>
           <div class="row py-3">
-            <h5 class="pb-3 tu-visita-tarifas"><?php echo translate('visit-admission-txt-general') ?></h5>
-            <div class="mb-1"><p><?php echo translate('visit-admission-national') ?></p></div>
-            <div class="mb-1"><p><?php echo translate('visit-admission-foreign') ?></p></div>
-            <div class="mb-1"><p><?php echo translate('visit-admission-special') ?></p></div>
-            <div class="mb-1"><p><?php echo translate('visit-admission-scholar') ?></p></div>
+            <h5 class="pb-3 tu-visita-tarifas">Entrada general</h5>
+            <div class="mb-1"><p><span class="poppins">$180</span> Nacionales y residentes</p></div>
+            <div class="mb-1"><p><span class="poppins">$360</span> Extranjeros</p></div>
+            <div class="mb-1"><p><span class="poppins">$100</span> Tercera edad y capacidades diferentes</p></div>
+            <div class="mb-1"><p><span class="poppins">$60</span> Maestros y estudiantes</p></div>
+            
           </div>
           <div class="row py-3">
-            <h5 class="pb-3 tu-visita-tarifas"><?php echo translate('visit-txt-tour') ?></h5>
-            <div class="mb-1"><p><?php echo translate('visit-tour-discount') ?></p></div>
+            <h5 class="pb-3 tu-visita-tarifas">Tour operadores</h5>
+            <div lass="mb-1"><p><span class="poppins">15%</span> de descuento</p></div>
           </div>
         </div>
     
         <div class="col-sm-12 col-md-12 col-lg-4 px-5">
           
           <div class="row py-3">
-            <h5 class="pb-3 tu-visita-tarifas"><?php echo translate('visit-txt-free') ?></h5>
-            <div class="mb-1"><p><?php echo translate('visit-free-kids') ?></p></div>
+            <h5 class="pb-3 tu-visita-tarifas">Acceso gratuito</h5>
+            <div class="mb-1"><p>Niños menores de 6 años, acompañados por un adulto</p></div>
           </div>
+          
+          <!--
+          <div class="row py-3">
+            <h5 class="pb-3 tu-visita-tarifas">
+                Maestros y estudiantes
+            </h5>
+            <div lass="mb-1">
+                <p>
+                    $60
+                </p>
+            </div>
+          </div>
+          -->
 
           <div class="row">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1819.9570053799562!2d-110.304437!3d24.1747483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86afd55ce56de7db%3A0x2e35376deb573de8!2sFrida%20en%20su%20Jardin%20Secreto!5e0!3m2!1ses-419!2smx!4v1697054828026!5m2!1ses-419!2smx" width="400" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -238,48 +216,48 @@
     <div class="container section-padding">
       <div id="boletos-parte-1" class="row align-items-start">
         <div class="col-sm-12 col-md-12 px-5 pb-4">
-          <h1 class="white-title txt-titulo lobster"><?php echo translate('section-tickets') ?></h1>	
+          <h1 class="white-title txt-titulo lobster">Boletos</h1>	
           <hr class="linea-horizontal-blanca"/>
         </div>
 
         <div class="col-sm-12 col-md-12 col-lg-6 px-5 text-white pb-4 poppins">
           <div class="row">
-            <p><?php echo translate('tickets-description') ?></p>
+            <p>Elige el horario en el que quieras visitar la exposición de Frida en su Jardín Secreto, realiza la compra, descarga tu boleto y preséntate directo en la fila para el acceso:</p>
           </div>
 
-          <h5 class="py-3"><?php echo translate('tickets-schedules') ?></h5>
+          <h5 class="py-3">Horarios</h5>
 
           <div class="row">
-            <p class="mb-1 poppins-regular"><?php echo translate('layout-date-mon-sun') ?>: <?php echo translate('layout-hour-8-20') ?></p>
+            <p class="mb-1 poppins-regular">Lunes a domingo: 8:00 am - 8:00 pm</p>
           </div>
 
           <div id="boletos-parte-2" class="row pt-5">
-            <p><?php echo translate('tickets-steps') ?></p>
+            <p>Para mantenerte seguro y obtener la mejor experiencia apóyanos a seguir estos pasos:</p>
             <ul class="px-5">
-              <li><?php echo translate('tickets-step-1') ?></li>
-              <li><?php echo translate('tickets-step-2') ?></li>
+              <li>Respeta tu horario de entrada, ya que no podrás ingresar en otro horario. </li>
+              <li>Procura el pago con tarjeta de crédito o débito en los servicios de la exposición.</li>
             </ul>
-            <p><?php echo translate('tickets-thanks') ?></p>
+            <p>Gracias por ayudarnos a mantener la exposición sana.</p>
           </div>
         </div>
 
         <div class="col-sm-12 col-md-12 col-lg-6 px-5 text-white pb-4 poppins">
           <div class="row">
-            <img src="./assets/images/Calendario.png" class="img-fluid d-none" alt="">
+            <img src="<?php bloginfo('template_directory');?>/public/images/Calendario.png" class="img-fluid d-none" alt="">
 
             <div id="boletos-parte-2" class="row">                 
-              <p><?php echo translate('tickets-notallowed') ?></p>
+              <p>No pueden ser ingresados al recinto:</p>
               <ul class="px-5">
-                <li><?php echo translate('tickets-notallowed-1') ?></li>
-                <li><?php echo translate('tickets-notallowed-2') ?></li>
-                <li><?php echo translate('tickets-notallowed-3') ?></li>
-                <li><?php echo translate('tickets-notallowed-4') ?></li>
+                <li>Objetos punzocortantes o armas de fuego</li>
+                <li>Maletas</li>
+                <li>Mascotas</li>
+                <li>Bebidas</li>
               </ul>
 
-              <p><?php echo translate('tickets-onceinside') ?></p>
+              <p>Una vez dentro de la exposición:</p>
               <ul class="px-5">
-                <li><?php echo translate('tickets-onceinside-1') ?></li>
-                <li><?php echo translate('tickets-onceinside-2') ?></li>
+                <li>Respeta las áreas delimitadas </li>
+                <li>No toques ninguno de los objetos expuestos</li>
               </ul>
             </div>
           </div>
@@ -291,7 +269,7 @@
 
   <!-- SLIDER -->
   <div id="jardin-secreto" class="container-fluid section-wall-bg px-0 ">
-    <div class="container-fluid  px-0 ">  
+    <div class="container-fluid  px-0 ">
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -299,23 +277,33 @@
               <div class="row">
 
                 <div class="col-12 col-lg-6">
-                  <img src="./assets/images/imagen-1.jpeg" class="img-fluid" alt="">
+                  <img src="<?php bloginfo('template_directory');?>/public/images/imagen-1.jpeg" class="img-fluid" alt="">
                 </div>
                 <div class="col-12 col-lg-6 pe-5">
                   <div class="row">
                     <div class="col px-5">
                       <div class="row py-5">
-                        <h1 class="white-title lobster"><?php echo translate('title') ?></h1>
+                        <h1 class="white-title lobster">Frida en su Jardín Secreto</h1>
                       </div>
                       <div class="row pb-5">
                         <p class="slider-p too-much-text">
-                          <?php echo translate('slider-page-1-txt-1') ?>
+                          Descubre la fuente de inspiración de Frida Kahlo
+                          en sus pinturas y autorretratos en un recorrido
+                          excepcional. 
                         </p>
                         <p class="slider-p too-much-text">
-                          <?php echo translate('slider-page-1-txt-2') ?>
+                          La Casa Azul, ubicada en Coyoacán, una de las
+                          zonas más antiguas y tradicionales de la Ciudad
+                          de México, se destaca por los altos muros de un
+                          brillante color azul cobalto, tras los cuales se
+                          asoman árboles centenarios que crean un dosel
+                          protector para un jardín
+                          de exuberante vegetación.
                         </p>
                         <p class="slider-p too-much-text">
-                          <?php echo translate('slider-page-1-txt-3') ?>
+                          Esta exposición descubre la profunda conexión de
+                          Frida con la vegetación nativa de México y el
+                          mundo natural.
                         </p>
                       </div>
                     </div>
@@ -328,23 +316,34 @@
             <div class="container-fluid px-0">
               <div class="row">
                 <div class="col-12 col-lg-6">
-                  <img src="./assets/images/imagen-2.jpeg" class="img-fluid h-100" alt="">
+                  <img src="<?php bloginfo('template_directory');?>/public/images/imagen-2.jpeg" class="img-fluid h-100" alt="">
                 </div>
                 <div class="col-12 col-lg-6 pe-5">
                   <div class="row">
                     <div class="col px-5">
                       <div class="row py-5">
-                        <h1 class="white-title lobster"><?php echo translate('title') ?></h1>
+                        <h1 class="white-title lobster">Frida en su Jardín Secreto</h1>
                       </div>
                       <div class="row pb-5">
                         <p class="slider-p too-much-text">
-                          <?php echo translate('slider-page-2-txt-1') ?>
+                          Este espacio singular, hogar e inspiración de Frida
+                          Kahlo y Diego Rivera, te transportará a un mundo
+                          mágico. 
                         </p>
                         <p class="slider-p too-much-text">
-                          <?php echo translate('slider-page-2-txt-2') ?>
+                          Instalado en el marco incomparable de La Paz,
+                          B.C.S. a la sombra de palmeras y repleto de plantas
+                          nativas mexicanas, follaje tropical y plantas del
+                          desierto; los visitantes están invitados a explorar
+                          los lugares emblemáticos del jardín de Frida en su
+                          Casa Azul; como la pirámide que exhibe la
+                          colección de piezas
+                          prehispánicas de Diego Rivera, la fuente con
+                          temática de ranas y el escritorio y caballete de la
+                          artista.
                         </p>
                         <p class="slider-p too-much-text">
-                          <?php echo translate('slider-page-2-txt-3') ?>
+                          ¡Ven y déjate llevar por esta experiencia única!
                         </p>
                       </div>
                     </div>
@@ -357,23 +356,32 @@
             <div class="container-fluid px-0">
               <div class="row">
                 <div class="col-12 col-lg-6">
-                  <img src="./assets/images/imagen-3.jpg" class="img-fluid" alt="">
+                  <img src="<?php bloginfo('template_directory');?>/public/images/imagen-3.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-12 col-lg-6 pe-5">
                   <div class="row">
                     <div class="col px-5">
                       <div class="row py-5">
-                        <h1 class="white-title lobster"><?php echo translate('title') ?></h1>
+                        <h1 class="white-title lobster">Frida en su Jardín Secreto</h1>
                       </div>
                       <div class="row pb-5">
                         <p class="slider-p too-much-text">
-                          <?php echo translate('slider-page-3-txt-1') ?>
+                          Sus plantas, esculturas y diseño te sumergirán en
+                          una experiencia inolvidable que celebra la cultura
+                          mexicana y nuestra identidad histórica y presente.
                         </p>
                         <p class="slider-p too-much-text">
-                          <?php echo translate('slider-page-3-txt-2') ?>
+                          La exposición también contará con seis animales
+                          monumentales dispuestos en sitios clave del
+                          exuberante jardín: un xolo, un mono, un venado,
+                          una mariposa, un loro y un colibrí que a menudo
+                          aparecen en las obras de arte de Frida, como
+                          testimonio de su pasión por el arte popular
+                          mexicano y el arte prehispánico.
                         </p>
                         <p class="slider-p too-much-text">
-                          <?php echo translate('slider-page-3-txt-3') ?>
+                          ¡Una experiencia inolvidable que te acercará a la
+                          artista mexicana más universal! 
                         </p>
                       </div>
                     </div>
@@ -404,13 +412,13 @@
   </div>
   <!-- SLIDER END -->
 
-  <!-- CALENDARIO 
+  <!-- Calendario -->
   <div id="calendario" class="container-fluid px-0 bg-black calendario">
 
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-10 col-lg-7 bg-orange custom-border">
-          <h1 class="white-title p-3 txt-titulo lobster"><?php echo translate('events-header') ?></h1>
+          <h1 class="white-title p-3 txt-titulo lobster">Conoce nuestros eventos y talleres del "Día de Muertos"</h1>
         </div>
       </div>
     </div>
@@ -421,51 +429,51 @@
 
           <div class="row p-3" style="border-bottom: 3px dotted white;">
             <div class="col-sm-12 col-lg-2 text-wrap lobster">
-              <h5><?php echo translate('events-date-1') ?></h5>
+              <h5>1 de noviembre</h5>
             </div>
             <div class="col-sm-12 col-lg-10 poppins" style="padding-left: 30px;">
-              <p class="p-0 m-0"> <?php echo translate('events-activity-1') ?></p>
+              <p class="p-0 m-0"> <span class="orange-text">“Inauguración ofrenda monumental”</span><br> Día de Muertos en honor a Frida</p>
             </div>
           </div>
 
           <div class="row p-3" style="border-bottom: 3px dotted white;">
             <div class="col-sm-12 col-lg-2 text-wrap lobster">
-              <h5><?php echo translate('events-date-2') ?></h5>
+              <h5>4 y 5 de noviembre</h5>
             </div>
             <div class="col-sm-12 col-lg-10 poppins"  style="padding-left: 30px;">
-              <p class="p-0 m-0"><?php echo translate('events-txt-activity') ?></p>
-              <p class="p-0 m-0">* <?php echo translate('events-activity-2-1') ?></p>
-              <p class="p-0 m-0">* <?php echo translate('events-activity-2-2') ?></p>
+              <p class="p-0 m-0">Actividad</p>
+              <p class="p-0 m-0">*<span class="orange-text">“Pinta tu calaverita”</span></p>
+              <p class="p-0 m-0">*<span class="orange-text">La 'pa guie'</span> Corona de Flores de Cempasuchil</p>
             </div>
           </div>
 
           <div class="row p-3" style="border-bottom: 3px dotted white;">
             <div class="col-sm-12 col-lg-2 text-wrap lobster">
-              <h5><?php echo translate('events-date-3') ?></h5>
+              <h5>9 de noviembre</h5>
             </div>
             <div class="col-sm-12 col-lg-10 poppins" style="padding-left: 30px;">
-              <p class="p-0 m-0"><?php echo translate('events-activity-3') ?></p>
+              <p class="p-0 m-0"><span class="orange-text">“Smoke & Spirits”</span> Ceremonia de <br> Sahumerio y clase de Mixología con flores de Cempasúchil </p>
             </div>
           </div>
 
           <div class="row p-3" style="border-bottom: 3px dotted white;">
             <div class="col-sm-12 col-lg-2 text-wrap lobster">
-              <h5><?php echo translate('events-date-4') ?></h5>
+              <h5>11 de noviembre</h5>
             </div>
             <div class="col-sm-12 col-lg-10 poppins" style="padding-left: 30px;">
-              <p class="p-0 m-0"><?php echo translate('events-activity-4') ?></p>
+              <p class="p-0 m-0">Exploratorio de Arte y Literatura <br><span class="orange-text">“Frida y Diego en el Jardín de las Calaveras”</span></p>
             </div>
           </div>
 
           <div class="row p-3">
             <div class="col-sm-12 col-lg-2 text-wrap lobster">
-              <h5><?php echo translate('events-date-5') ?></h5>
+              <h5>18, 19, 25 y 26 de noviembre</h5>
             </div>
             <div class="col-sm-12 col-lg-10 poppins" style="padding-left: 30px;">
-              <p class="p-0 m-0"><?php echo translate('events-txt-activity') ?></p>
-              <p class="p-0 m-0">* <?php echo translate('events-activity-5-1') ?></p>
-              <p class="p-0 m-0">* <?php echo translate('events-activity-5-2') ?></p>
-              <p class="pt-4 m-0" style="font-size: 15px;"><?php echo translate('events-info') ?></p>
+              <p class="p-0 m-0">Actividad</p>
+              <p class="p-0 m-0">*<span class="orange-text">“Pinta tu calaverita”</span></p>
+              <p class="p-0 m-0">*<span class="orange-text">La 'pa guie'</span> Corona de Flores de Cempasúchil</p>
+              <p class="pt-4 m-0" style="font-size: 15px;">Solicita información en nuestras redes</p>
             </div>
           </div>
         </div>
@@ -476,42 +484,42 @@
     <div class="container-fluid">
       <div class="row" style="position: relative;">
         <div>
-          <img src="./assets/images/logo.png" class="logo-img" alt="" style="position: absolute; right: 0; bottom: 0;">
+          <img src="<?php bloginfo('template_directory');?>/public/images/Isologo.png" class="logo-img" alt="" style="position: absolute; right: 0; bottom: -1px;">
         </div>
       </div>
     </div>
   </div>
-  CALENDARIO END -->
-
+  <!-- Calendario -->
+	
   <!-- GRUPOS -->
   <div id="grupos" class="container-fluid px-0 bg-white">
     <div class="container section-padding">
-        <h1 class="pink-title pb-5 txt-titulo lobster"><?php echo translate('section-groups') ?></h1>
+        <h1 class="pink-title pb-5 txt-titulo lobster">Grupos</h1>
         
         <div class="row pt-5">
           <div class="col-sm-12 col-lg-4 text-wrap poppins">
-            <h5><?php echo translate('groups-txt-school') ?></h5>
+            <h5>Escolares</h5>
           </div>
           <div class="col-sm-12 col-lg-8 px-5 custom-border-start poppins-regular">
-            <p class="pb-4"><?php echo translate('groups-school') ?></p>
+            <p class="pb-4">Disfrútala en los jardínes de la exposición según tu escolaridad (preescolar, primaria, secundaria, preparatoria, educación superior y especialistas).</p>
           </div>
         </div>
         
         <div class="row">
           <div class="col-sm-12 col-lg-4 text-wrap poppins">
-            <h5><?php echo translate('groups-txt-community') ?></h5>
+            <h5>Nuestra comunidad</h5>
           </div>
           <div class="col-sm-12 col-lg-8 px-5 custom-border-start poppins-regular">
-            <p class="pb-4"><?php echo translate('groups-community') ?></p>
+            <p class="pb-4">Comprometidos con nuestra comunidad, ofrecemos visitas para adultos mayores, casas hogar y personas con discapacidad intelectual, visual, auditiva y motriz.</p>
           </div>
         </div>
         
         <div class="row">
           <div class="col-sm-12 col-lg-4 text-wrap poppins">
-            <h5><?php echo translate('groups-txt-private') ?></h5>
+            <h5>Privados y empresariales</h5>
           </div>
           <div class="col-sm-12 col-lg-8 px-5 custom-border-start poppins-regular">
-            <p><?php echo translate('groups-private') ?></p>
+            <p>Disfruta de las historias de quienes habitaron en esta casa y del mundo en el que vivió Frida, bajo la sombra de los árboles bajo los cuales ella misma se paseaba.</p>
           </div>
         </div>
     </div>
@@ -522,11 +530,11 @@
   <div id="servicios" class="container-fluid section-wall-bg section-padding px-0 py-0">
 
     <div class="container d-none">
-      <h1 class="white-title txt-titulo lobster"><?php echo translate('section-services') ?></h1>
+      <h1 class="white-title txt-titulo lobster">Servicios</h1>
     </div>
 
     <div class="container-fluid px-0 pb-5">
-      <img src="./assets/images/red-stripe.png" class="img-fluid w-100 stripe" alt="">
+      <img src="<?php bloginfo('template_directory');?>/public/images/red-stripe.png" class="img-fluid w-100 stripe" alt="">
     </div>
 
     <div class="container my-5">
@@ -537,10 +545,10 @@
                       <div class="frame-2">
                         <div class="presentation">
                           <div class="row">
-                            <h2><?php echo translate('services-block-rosita') ?></h2>
+                            <h2>La Rosita<br>Restaurante<br>Pulquería</h2>
                           </div>
                           <div class="row blue-content">
-                            <p><?php echo translate('layout-date-upcoming') ?></p>
+                            <p>Próximamente</p>
                           </div>
                         </div>
                       </div>
@@ -553,12 +561,15 @@
                       <div class="frame-2">
                         <div class="presentation">
                           <div class="row">
-                            <h2><?php echo translate('layout-shop') ?></h2>
+                            <h2>Tienda</h2>
                           </div>
                           <div class="row services-poppins">
-                            <p><?php echo translate('services-block-shop') ?></p>
-                            <p class="blue-content"><b><?php echo translate('layout-date-mon-sun') ?></b><br>
-                            <?php echo translate('layout-hour-8-20') ?></p>
+                            <p>Quédate con algo de
+                            Frida: joyería,
+                            souvenirs, libros de
+                            arte y mucho más.</p>
+                            <p class="blue-content"><b>Lunes a Domingo</b><br>
+                            8:00 am – 8:00 pm</p>
                           </div>
                         </div>
                       </div>
@@ -571,12 +582,14 @@
                       <div class="frame-2">
                         <div class="presentation">
                           <div class="row">
-                            <h2><?php echo translate('services-block-doce') ?></h2>
+                            <h2>DoceCuarenta<br>Cafetería</h2>
                           </div>
                           <div class="row services-poppins">
-                            <p><?php echo translate('services-block-doce-txt') ?></p>
-                            <p class="blue-content"><b><?php echo translate('layout-date-mon-sun') ?></b><br>
-                            <?php echo translate('layout-hour-8-20') ?></p>
+                            <p>Disfruta de las
+                              delicias que te
+                              ofrecemos.</p>
+                            <p class="blue-content"><b>Lunes a Domingo</b><br>
+                            8:00 am – 8:00 pm</p>
                           </div>
                         </div>
                       </div>
@@ -587,7 +600,7 @@
     </div>
     
     <div class="container-fluid px-0 pt-5">
-      <img src="./assets/images/red-stripe.png" class="img-fluid w-100 stripe" alt="">
+      <img src="<?php bloginfo('template_directory');?>/public/images/red-stripe.png" class="img-fluid w-100 stripe" alt="">
     </div>
   </div>
   <!-- SERVICIOS END -->
@@ -597,33 +610,33 @@
     <div class="container">
       
       <div class="row">
-        <h1 class="txt-titulo text-break pink-title lobster"><?php echo translate('section-contact') ?></h1>
+        <h1 class="txt-titulo text-break pink-title lobster">Contáctanos</h1>
 
       </div>      
       <div class="row">  
         <div class="col-12 col-lg-6 py-5 px-5">
-          <img src="./assets/images/autorretratocollarespinascolibri.jpg" class="img-fluid" alt="Autorretrato">
+          <img src="<?php bloginfo('template_directory');?>/public/images/autorretratocollarespinascolibri.jpg" class="img-fluid" alt="Autorretrato">
           <p class="m-0 pt-3 contactanos-direccion">D.R. © 2023 Banco de México, Fiduciario en el Fideicomiso Museos Diego Rivera y Frida Kahlo.</p>
           <p class="m-0 contactanos-direccion">Av. 5 de Mayo No. 20, Col. Centro, C.P. 06000, Ciudad de México</p>
         </div>
         <div id="contactanos" class="col-sm-12 col-md-12 col-lg-6 p-5 poppins-regular">
           <div class="row">
-            <p class="pb-3"><?php echo translate('contact-txt-arrive') ?></p>
+            <p class="pb-3">Te decimos cómo llegar desde donde estés.</p>
           </div>
           <div class="row">
-            <h6 class="contactanos-datos"><?php echo translate('contact-txt-address') ?></h6><br><p><?php echo translate('contact-address') ?></p>
+            <h6 class="contactanos-datos">Dirección</h6><br><p>Carretera Escénica esq. Campeche, Colina del Sol, 23010 La Paz.</p>
           </div>
           <div class="row">
-            <h6 class="contactanos-datos"><?php echo translate('contact-txt-phone') ?></h6><br><p>612 128 8032</p>
+            <h6 class="contactanos-datos">Teléfono</h6><br><p>612 128 8032</p>
           </div>
           <div class="row text-wrap pb-3">
-            <h6 class="contactanos-datos"><?php echo translate('contact-txt-mail') ?></h6><br><p class="text-break">contacto@fridaensujardinsecreto.com</p>
+            <h6 class="contactanos-datos">Correo</h6><br><p class="text-break">contacto@fridaensujardinsecreto.com</p>
           </div>
           <form class="pb-5">
             <div class="row">
               <div class="col-md-3">
                 <div class="mb-3">
-                  <label for="nombre" class="form-label"><?php echo translate('contact-txt-name') ?>:</label>
+                  <label for="nombre" class="form-label">Nombre:</label>
                 </div>
               </div>
               <div class="col-md-9">
@@ -635,7 +648,7 @@
             <div class="row">
               <div class="col-md-3">
                 <div class="mb-3">
-                  <label for="correo" class="form-label"><?php echo translate('contact-txt-mail') ?>:</label>
+                  <label for="correo" class="form-label">Correo:</label>
                 </div>
               </div>
               <div class="col-md-9">
@@ -647,7 +660,7 @@
             <div class="row">
               <div class="col-md-3">
                 <div class="mb-3">
-                  <label for="mensaje" class="form-label"><?php echo translate('contact-txt-message') ?>:</label>
+                  <label for="mensaje" class="form-label">Mensaje:</label>
                 </div>
               </div>
               <div class="col-md-9">
@@ -658,16 +671,16 @@
             </div>
             <div id="contactanos-terminos-condiciones"class="mb-3 form-check pb-3">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1"><?php echo translate('contact-txt-agree') ?></label>
+              <label class="form-check-label" for="exampleCheck1">Acepto que los datos enviados se recopilen y almacenen.</label>
             </div>
-            <button type="submit" class="btn btn-primary rounded-pill border-0 px-4 bg-pink"><?php echo translate('btn-send') ?></button>
+            <button type="submit" class="btn btn-primary rounded-pill border-0 px-4 bg-pink">Enviar</button>
           </form>
           <div id="oferta-trabajo" class="p-3 rounded-4 bg-5">
-            <p class="m-0"><?php echo translate('contact-txt-offer-1') ?></p>
-            <p class="m-0"><?php echo translate('contact-txt-offer-2') ?></p>
-            <p class="m-0"><?php echo translate('contact-txt-offer-3') ?></p>
-            <p class="m-0"><?php echo translate('contact-txt-offer-4') ?></p>
-            <p class="m-0 text-break"><?php echo translate('contact-txt-offer-5') ?></p>
+            <p class="m-0">¿Te gusta el arte?</p>
+            <p class="m-0">¿Te gusta trabajar con niños, adolescentes y adultos?</p>
+            <p class="m-0">Experimenta la emoción de ser parte de Frida en su Jardín Secreto.</p>
+            <p class="m-0">Únete a nuestro equipo de guías y educadores.</p>
+            <p class="m-0 text-break">Informes en: correo@fridaensujardínsecreto.com</p>
           </div>
         </div>
       </div>
@@ -679,7 +692,7 @@
   <div id="footer" class="container-fluid pb-5 mx-0 px-0 bg-black">
     <div class="container-fluid px-0">
       <div class="col-2 logo pb-5">
-        <a href="#inicio"><img src="./assets/images/logo.png" class="logo-img" alt=""></a>
+        <a href="#inicio"><img src="<?php bloginfo('template_directory');?>/public/images/logo.png" class="logo-img" alt=""></a>
       </div>
 
       <div class="col-10"></div>
@@ -696,43 +709,43 @@
           <div class="row">
             <div class="col-12 col-lg-4">
               <div class="row pb-3">
-                <p class="h1 footer-titles"><?php echo translate('layout-links') ?></p>
+                <p class="h1 footer-titles">Enlaces</p>
               </div>
               <div class="row pb-3">
-                <h4><a href="#tu-visita" class="link-light link-underline link-underline-opacity-0"><?php echo translate('section-visit') ?></a></h4>
+                <h4><a href="#tu-visita" class="link-light link-underline link-underline-opacity-0">Planea tu visita</a></h4>
               </div>
               <div class="row pb-3">
-                <h4><a href="#jardin-secreto" class="link-light link-underline link-underline-opacity-0"><?php echo translate('section-garden') ?></a></h4>
+                <h4><a href="#jardin-secreto" class="link-light link-underline link-underline-opacity-0">Jardín Secreto</a></h4>
               </div>
               <div class="row pb-3">
-                <h4><a href="#grupos" class="link-light link-underline link-underline-opacity-0"><?php echo translate('section-groups') ?></a></h4>
+                <h4><a href="#grupos" class="link-light link-underline link-underline-opacity-0">Grupos</a></h4>
               </div>
               <div class="row pb-3">
-                <h4><a href="#contactanos" class="link-light link-underline link-underline-opacity-0"><?php echo translate('section-contact') ?></a></h4>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-4">
-              <div class="row pb-3">
-                <p class="h1 footer-titles"><?php echo translate('layout-shop') ?></p>
-              </div>
-              <div class="row pb-3">
-                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0"><?php echo translate('layout-restaurant') ?></a></h4>
-              </div>
-              <div class="row pb-3">
-                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0"><?php echo translate('layout-garden-shop') ?></a></h4>
-              </div>
-              <div class="row pb-3">
-                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0"><?php echo translate('layout-coffee') ?></a></h4>
+                <h4><a href="#contactanos" class="link-light link-underline link-underline-opacity-0">Contacto</a></h4>
               </div>
             </div>
 
             <div class="col-12 col-lg-4">
               <div class="row pb-3">
-                <p class="h1 footer-titles"><?php echo translate('layout-social') ?></p>
+                <p class="h1 footer-titles">Servicios</p>
               </div>
               <div class="row pb-3">
-                <h4><a href="https://www.tiktok.com/@fridaensujardinsecreto" class="link-light link-underline link-underline-opacity-0">TIK TOK</a></h4>
+                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0">La Rosita Restaurante Pulquería</a></h4>
+              </div>
+              <div class="row pb-3">
+                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0">Tienda del jardín</a></h4>
+              </div>
+              <div class="row pb-3">
+                <h4><a href="#servicios" class="link-light link-underline link-underline-opacity-0">DoceCuarenta Cafetería</a></h4>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="row pb-3">
+                <p class="h1 footer-titles">Social</p>
+              </div>
+              <div class="row pb-3">
+                <h4><a href="https://www.tiktok.com/@fridaensujardinsecreto" class="link-light link-underline link-underline-opacity-0">TikTok</a></h4>
               </div>
               <div class="row pb-3">
                 <h4><a href="https://www.instagram.com/fridaensujardinsecreto/" class="link-light link-underline link-underline-opacity-0">Instagram</a></h4>
@@ -772,19 +785,19 @@
           </div>
           <div class="row gx-0 pb-5">
             <div class="position-relative top-0 start-50 translate-middle-x fit-content">
-              <a href="https://www.instagram.com/fridaensujardinsecreto/"><img src="./assets/images/redes-instagram.png" alt="instagram" class="icon-social"></a>
-              <a href="https://www.facebook.com/profile.php?id=100092258479518"><img src="./assets/images/redes-facebook.png" alt="facebook" class="icon-social"></a>
-              <a href="https://es.linkedin.com/posts/frida-en-su-jardín-secreto_lapaz-bcs-bajacaliforniasur-activity-7090360276515966978-dpPz?trk=public_profile_like_view"><img src="./assets/images/redes-linkedin.png" alt="linkedin" class="icon-social"></a>
-              <a href="https://www.tiktok.com/@fridaensujardinsecreto"><img src="./assets/images/redes-tiktok.png" alt="tiktok" class="icon-social"></a>
-              <a href="https://www.instagram.com/fridaensujardinsecreto/"><img src="./assets/images/redes-x.png" alt="x" class="icon-social"></a>
+              <a href="https://www.instagram.com/fridaensujardinsecreto/"><img src="<?php bloginfo('template_directory');?>/public/images/redes-instagram.png" alt="instagram" class="icon-social"></a>
+              <a href="https://www.facebook.com/profile.php?id=100092258479518"><img src="<?php bloginfo('template_directory');?>/public/images/redes-facebook.png" alt="facebook" class="icon-social"></a>
+              <a href="https://es.linkedin.com/posts/frida-en-su-jardín-secreto_lapaz-bcs-bajacaliforniasur-activity-7090360276515966978-dpPz?trk=public_profile_like_view"><img src="<?php bloginfo('template_directory');?>/public/images/redes-linkedin.png" alt="linkedin" class="icon-social"></a>
+              <a href="https://www.tiktok.com/@fridaensujardinsecreto"><img src="<?php bloginfo('template_directory');?>/public/images/redes-tiktok.png" alt="tiktok" class="icon-social"></a>
+              <a href="https://www.instagram.com/fridaensujardinsecreto/"><img src="<?php bloginfo('template_directory');?>/public/images/redes-x.png" alt="x" class="icon-social"></a>
             </div>
             
           </div>
         </div>
         <div class="col-12 col-lg-3 px-0">
           <div class="position-relative top-0 start-50 translate-middle-x fit-content">
-            <img src="./assets/images/museo-frida-kahlo-seeklogo.com.jpg" alt="Museo Frida Kahlo" class="logo-museo me-4">
-            <img src="./assets/images/logo-uabcs.png" alt="uabcs" class="logo-museo">
+            <img src="<?php bloginfo('template_directory');?>/public/images/museo-frida-kahlo-seeklogo.com.jpg" alt="Museo Frida Kahlo" class="logo-museo me-4">
+            <img src="<?php bloginfo('template_directory');?>/public/images/logo-uabcs.png" alt="uabcs" class="logo-museo">
           </div>
         </div>
       </div>
@@ -797,10 +810,10 @@
     <div class="container">
       <div class="row py-3 text-center">
         <div class="col-6 col-md-3 extra">2023 Frida en su Jardín Secreto</div>
-        <div class="col-6 col-md-3 extra"><?php echo translate('footer-copyright') ?></div>
+        <div class="col-6 col-md-3 extra">Todos los derechos reservados</div>
         <div class="col-6 col-md-3">
           <button type="button" class="btn btn-primary no-button-style p-0 extra" data-bs-toggle="modal" data-bs-target="#avisoPrivacidad">
-            <p class="white-poppins m-0"><?php echo translate('footer-privacy') ?></p>
+            <p class="white-poppins m-0">Aviso de Privacidad</p>
           </button>
           <!-- Modal Aviso de Privacidad -->
           <div class="modal fade" id="avisoPrivacidad" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -838,7 +851,7 @@
         </div>
         <div class="col-6 col-md-3">
           <button type="button" class="btn btn-primary no-button-style p-0 extra" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <p class="white-poppins m-0" ;><?php echo translate('footer-cancellation') ?></p>
+            <p class="white-poppins m-0" ;>Políticas de Cancelación</p>
           </button>
           <!-- Modal Térmios de Uso-->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -888,19 +901,9 @@
     </div>
   </div>
   <!-- Extras 1 END -->
+  <!-- MODAL AVISO DE PRIVACIDAD -->
   
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3LR93324F"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-N3LR93324F');
-  </script> 
-  <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"d47bcdc4211451569994c5769cd1980f"})});</script>
+  <?php include('layouts/scripts.template.php') ?>
 </body>
+  
 </html>
