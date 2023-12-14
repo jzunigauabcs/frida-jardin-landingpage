@@ -272,6 +272,29 @@ header .logo img, .logo-img {
   border-radius: 0 0 50px 0;
 }
 
+.floating {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+
+  z-index: 100;
+  
+ }
+ .floating:hover{
+  background-color: #198754;
+ }
+ .fab-icon {
+  margin-top: 16px;
+ }
+
+ 
 @media (min-width:1400px){
   .frames{
     max-width: 2000 !important;
